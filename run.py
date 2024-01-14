@@ -2,6 +2,26 @@ import random
 import time
 import os
 
+score = 0
+
+questions = [
+    {
+        "city": "1",
+        "question": [
+            {
+                "points": 10,
+                "text": "10 points: This city is the capital of Sweden",
+                "answer": "Stockholm",
+            },
+            {
+                "points": 8,
+                "text": "This city is the home of DIF",
+                "answer": "Stockholm",
+            },
+        ],
+    }
+]
+
 
 def clear():
     """
@@ -36,33 +56,19 @@ def main():
 main()
 
 
-questions = [
-   { 
-    "city": "1",
-    "questions": [
-        {"points": 10, "text": "This city is the capital of Sweden", "answer": "Stockholm"},
-        {"points": 8, "text": "This city is the home of DIF", "answer": "Stockholm"}
-    ]
-   }
-]
-print(questions)
-
-
-def game_instructions():
-    pass
-
-
 def game_start():
+    clear()
     score = 0
     for question in questions:
-        print(question["1 ,10 points"])
-        answer = input("Answer: ")
-        if answer == question["answer"]:
-            score += 10
-            print("Correct! Your score is now " + str(score))
-        else:
-            print("Wrong! Your score is still " + str(score))
+        print(question["question"][0]["text"])
+
+
+game_start()
 
 
 def show_question():
+    pass
+
+
+def game_instructions():
     pass
