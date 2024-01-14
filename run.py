@@ -1,7 +1,17 @@
+"""
+This is the main file for the game Track Quest.
+The game is based on the swedish TV-show "På spåret".
+The goal is to guess the city from the clues given.
+The game is built with inspiration from the youtube tutorial
+
+"""
+
+# Importing modules
 import random
 import time
 import os
 
+# Global variables
 score = 0
 
 questions = [
@@ -23,11 +33,8 @@ questions = [
 ]
 
 
+# Clears the screen based on the user's operating system.
 def clear():
-    """
-    Function to clear the terminal on windows, mac and
-    linux for a better user experience.
-    """
     # for Windows
     if os.name == "nt":
         os.system("cls")
@@ -58,7 +65,7 @@ main()
 
 def game_start():
     clear()
-    score = 0
+    print("Where are we heading?") 
     for question in questions:
         print(question["question"][0]["text"])
 
