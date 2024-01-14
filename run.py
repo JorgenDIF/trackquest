@@ -40,12 +40,13 @@ questions = [
  """
 
 
-def delprint(text, delay_time): 
-    for character in text:      
-        sys.stdout.write(character) 
+def delprint(text, delay_time=0.1):
+    # Delayed printing function
+    for character in text:
+        sys.stdout.write(character)  # writes the character
         sys.stdout.flush()
-        time.sleep(delay_time)
-    print("")
+        time.sleep(delay_time)  # this is the delay time between each
+    print()  # make a new line   
 
   
 # Clears the screen based on the user's operating system.
@@ -59,12 +60,12 @@ def clear():
 
 
 def main():
-    delprint("Welcome to Track Quest!", 0.1)
-    delprint("This game concept is from the swedish TV-show 'På spåret'", 0.1)
-    delprint("The goal is to guess the city from the clues given", 0.1)
-    delprint("The game will be played in 5 rounds.", 0.1)
-    delprint("The rounds goes from 10 points to 2 points.", 0.1)
-    delprint("Enter your name to continue", 0.1)
+    delprint("Welcome to Track Quest!")
+    delprint("This game concept is from the swedish TV-show 'På spåret'")
+    delprint("The goal is to guess the city from the clues given")
+    delprint("The game will be played in 5 rounds.")
+    delprint("The rounds goes from 10 points to 2 points.")
+    delprint("Enter your name to continue")
 
     while True:
         player_name = input("Please enter your preferred username: ")
@@ -72,7 +73,19 @@ def main():
             break
         print("Username can not be empty, please try again.")
     # Print a blank line for formatting
-    print("Welcome " + player_name + "!")
+    delprint("Welcome " + player_name + "!")
+
+    while True:
+        compartment = input("Do you want to sit in first class or the handcar?")
+        if compartment == "first class":
+            delprint("You have chosen first class")
+            break
+        elif compartment == "handcar":
+            delprint("You have chosen the handcar")
+            time.sleep(3)
+            break
+        else:
+            delprint("Please choose between first class or handcar")
 
 
 main()
@@ -81,9 +94,9 @@ main()
 def game_start():
     clear()
 
-    delprint("Where are we heading?", 0.1) 
+    delprint("Where are we heading?") 
     for question in questions:
-        delprint(question["question"][0]["text"], 0.1)
+        delprint(question["question"][0]["text"])
 
 
 game_start()
