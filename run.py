@@ -46,9 +46,9 @@ def delprint(text, delay_time=0.1):
         sys.stdout.write(character)  # writes the character
         sys.stdout.flush()
         time.sleep(delay_time)  # this is the delay time between each
-    print()  # make a new line   
+    print()  # make a new line
 
-  
+
 # Clears the screen based on the user's operating system.
 def clear():
     # for Windows
@@ -65,6 +65,8 @@ def main():
     delprint("The goal is to guess the city from the clues given")
     delprint("The game will be played in 5 rounds.")
     delprint("The rounds goes from 10 points to 2 points.")
+    delprint("You will get only one guess per destination!")
+    delprint("Remeber that a wrong answer will give you zero points!")
     delprint("Enter your name to continue")
 
     while True:
@@ -76,7 +78,7 @@ def main():
     delprint("Welcome " + player_name + "!")
 
     while True:
-        compartment = input("Do you want to sit in first class or the handcar?")
+        compartment = input("Do you want to sit in first class " "or the handcar?")
         if compartment == "first class":
             delprint("You have chosen first class")
             break
@@ -94,7 +96,7 @@ main()
 def game_start():
     clear()
 
-    delprint("Where are we heading?") 
+    delprint("Where are we heading?")
     for question in questions:
         delprint(question["question"][0]["text"])
 
