@@ -2,8 +2,9 @@
 The questions are mostly translations from the Swedish version of the game.
 Credits to https://pasparetbloggen.blogspot.com/p/blog-page.html
 """
+questions = [
 
-city_1 = [
+
     {
         "category": "city_1",
         "point": 10,
@@ -13,7 +14,7 @@ city_1 = [
             "is not a godfather, rather the opposite but he still "
             "drives a Ferrari."
         ),
-        "svar": "Miami",
+        "answer": "Miami",
     },
     {
         "category": "city_1",
@@ -23,7 +24,7 @@ city_1 = [
             "But maybe it's the girls gone wild during spring break that "
             "made Sisqo want to make TV here."
         ),
-        "svar": "Miami",
+        "answer": "Miami",
     },
     {
         "category": "city_1",
@@ -35,7 +36,7 @@ city_1 = [
             "you say about that, mi-amigo? Despite Spanish, it's a French "
             "design style that made the beach famous."
         ),
-        "svar": "Miami",
+        "answer": "Miami",
     },
     {
         "category": "city_1",
@@ -46,11 +47,11 @@ city_1 = [
             "Key West and South Beach are neighbors with our city, so relax, "
             "you're now in ____!"
         ),
-        "svar": "Miami",
+        "answer": "Miami",
     },
-]
 
-city_2 = [
+
+
     {
         "category": "city_2",
         "points": 10,
@@ -110,8 +111,8 @@ city_2 = [
         ),
         "answer": "Manchester",
     },
-]
-city_3 = [
+
+
     {
         "category": "city_3",
         "points": 10,
@@ -173,9 +174,7 @@ city_3 = [
         ),
         "answer": "London",
     },
-]
 
-city_4 = [
     {
         "category": "city_4",
         "points": 10,
@@ -234,8 +233,8 @@ city_4 = [
         ),
         "answer": "Dublin",
     },
-]
-city_5 = [
+
+
     {
         "category": "city_5",
         "points": 10,
@@ -285,9 +284,7 @@ city_5 = [
         ),
         "answer": "Kairo",
     },
-]
 
-city_6 = [
     {
         "category": "city_6",
         "points": 10,
@@ -342,10 +339,7 @@ city_6 = [
         ),
         "answer": "Orlando",
     },
-]
 
-
-city_7 = [
     {
         "category": "city_7",
         "points": 10,
@@ -397,9 +391,7 @@ city_7 = [
         ),
         "answer": "Prag",
     },
-]
 
-city_8 = [
     {
         "category": "city_8",
         "points": 10,
@@ -459,9 +451,7 @@ city_8 = [
         ),
         "answer": "Buenos Aires",
     },
-]
 
-city_9 = [
     {
         "category": "city_9",
         "points": 10,
@@ -521,9 +511,7 @@ city_9 = [
         ),
         "answer": "Johannesburg",
     },
-]
 
-city_10 = [
     {
         "category": "city_10",
         "points": 10,

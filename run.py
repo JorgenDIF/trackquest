@@ -7,31 +7,15 @@ The game is built with inspiration from the youtube tutorial
 """
 
 # Importing modules
-import random
-import time
 import os
 import sys
+import time
+import random
+from question_data import questions
+
 
 # Global variables
 score = 0
-
-questions = [
-    {
-        "city": "1",
-        "question": [
-            {
-                "points": 10,
-                "text": "10 points: This city is the capital of Sweden",
-                "answer": "Stockholm",
-            },
-            {
-                "points": 8,
-                "text": "This city is the home of DIF",
-                "answer": "Stockholm",
-            },
-        ],
-    }
-]
 
 
 """
@@ -91,23 +75,22 @@ def main():
             delprint("Please choose between first class or handcar")
 
 
-main()
+class Question:
+    def __init__(self, category, points, text, answer):
+        self.category = category
+        self.points = points
+        self.text = text
+        self.answer = answer
 
 
-def game_start():
-    clear()
-
-    delprint("Where are we heading?")
-    for question in questions:
-        delprint(question["question"][0]["text"])
-
-
-game_start()
-
-
-def show_question():
-    pass
+question_bank = []
+for question in questions:
+    question_category = question["category"]
+    question_points = question["points"]
+    question_text = question["text"]
+    question_answer = question["answer"]
+    new_question = Question(question_category, question_points,
+                            question_text, question_answer)
+    question_bank.append(new_question)
 
 
-def game_instructions():
-    pass
