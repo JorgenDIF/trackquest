@@ -35,9 +35,9 @@ questions = [
 
 
 """
- Function to print text with a delay between each character. 
- Credit to: https://replit.com/talk/learn/The-Slow-Print/44741
- """
+Function to print text with a delay between each character.
+Credit to: https://replit.com/talk/learn/The-Slow-Print/44741
+"""
 
 
 def delprint(text, delay_time=0.1):
