@@ -1,32 +1,161 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Content
 
-Welcome,
+**Table of content:**
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+- [Introduction](#introduction)
+  - [Am I Responsive](#responsive)
+- [UX](#ux)
+  - [The Strategy](#the-strategy)
+  - [The Scope](#the-scope)
+  - [The Structure](#the-structure)
+  - [The Skeleton](#the-skeleton)
+  - [The Surface](#the-surface)
+- [User Experience](#user-experience)
+  - [First Time User](#first-time-user)
+  - [Returning User](#returning-user)
+  - [Frequent User](#frequent-user)
+  - [Design](#design)
+- [Feauters](#feauters)
+  - [The Main Page 1](#maine-page1)
+- [Technologies](#technologies)
+  - [Language](#language)
+  - [Tools](#tools)
+  - [Frameworks & Libaries](#frameworks-libaries)
+- [Testing](#testing)
+  - [Manual Testing](#manual-testing)
+  - [Lighthouse](#lighthouse)
+  - [Browser Test](#browser-test)
+  - [Validation](#validation)
+  - [Bugs](#bugs)
+- [Deployment](#deployment)
+  - [Deployment To Github](#deployment-to-github)
+  - [Deployment To Heroku](#depoyment-to-heroku)
+- [Credit](#credit)
+  - [Content](#credit-content)
+  - [Images][def2]
+  - [Thank You][def]
 
-## Reminders
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+<a id="responsive">
 
-## Creating the Heroku app
+### Am I Responsive?
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+<a id="ux">
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## UX
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+<a id="the-strategy">
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+### The Strategy
 
-Connect your GitHub repository and deploy as normal.
+<a id="the-scope">
 
-## Constraints
+### The Scope
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+<a id="the-structure">
 
----
+### The Structure
 
-Happy coding!
+<a id="the-skeleton">
+
+### The Skeleton
+
+<a id="the-surface">
+
+### The Surface
+
+<a id="ux">
+
+# User Experience
+
+<a id="first-time-user">
+
+### First Time User
+
+<a id="returning-user">
+
+### Returning User
+
+<a id="frequent-user">
+
+### Frequent User
+
+
+<a id="design">
+
+
+### Design
+
+<a id="feauters">
+
+#  Features
+
+  <a id="maine-page1">
+
+### The Main Page 1
+
+
+<a id="technologies">
+
+
+#  Technologies
+
+<a id="languages">
+
+
+### Languages
+
+<a id="tools">
+
+### Tools
+
+<a id="frameworks-libaries">
+
+### Frameworks & Libaries
+
+<a id="testing">
+
+#  Testing
+
+
+### Manual Testing
+
+<a id="lighthouse">
+
+### Lighthouse
+
+<a id=browser-test>
+
+### Browser Test
+
+<a id= "vaildation">
+
+### Validation
+
+<a id ="bugs">
+
+### Bugs
+
+<a id="deployment">
+
+# Depolyment
+
+<a id="deployment-to-github">
+
+### Deployment To Github
+
+<a id=credit>
+
+### Deployment To Heroku
+
+<a id="depoyment-to-heroku">
+
+# Credit
+
+ <a id="credit-content">
+
+ ### Content
+
+  ### Media
+
+  ### Thank You
