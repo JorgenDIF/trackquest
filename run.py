@@ -78,7 +78,8 @@ def main():
     delprint("Welcome " + player_name + "!")
 
     while True:
-        compartment = input("Do you want to sit in first class " "or the handcar?")
+        compartment = input("Do you want to sit in first class "
+                            "or the handcar?")
         if compartment == "first class":
             delprint("You have chosen first class")
             break

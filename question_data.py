@@ -1,3 +1,8 @@
+"""Contains all questions and answers for the game.
+The questions are mostly translations from the Swedish version of the game.
+Credits to https://pasparetbloggen.blogspot.com/p/blog-page.html
+"""
+
 city_1 = [
     {
         "category": "city_1",
