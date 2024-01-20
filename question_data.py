@@ -4,6 +4,7 @@ Credits to https://pasparetbloggen.blogspot.com/p/blog-page.html
 """
 questions = [
 
+    # City 1 questions
 
     {
         "category": "city_1",
@@ -50,7 +51,7 @@ questions = [
         "answer": "Miami",
     },
 
-
+    # City 2 questions
 
     {
         "category": "city_2",
@@ -112,6 +113,7 @@ questions = [
         "answer": "Manchester",
     },
 
+    # City 3 questions
 
     {
         "category": "city_3",
@@ -175,6 +177,8 @@ questions = [
         "answer": "London",
     },
 
+    # City 4 questions
+
     {
         "category": "city_4",
         "points": 10,
@@ -234,6 +238,7 @@ questions = [
         "answer": "Dublin",
     },
 
+    # City 5 questions
 
     {
         "category": "city_5",
@@ -285,6 +290,8 @@ questions = [
         "answer": "Kairo",
     },
 
+    # City 6 questions
+
     {
         "category": "city_6",
         "points": 10,
@@ -334,11 +341,14 @@ questions = [
         "category": "city_6",
         "points": 2,
         "text": (
-            "Disney World, Sea World, and Universal Studios attract "
-            "all tourists to this Florida city that starts with an O."
-        ),
+             "Disney World, Sea World, and Universal Studios attract "
+             "all tourists to this Florida city that starts with an O."
+
+         ),
         "answer": "Orlando",
     },
+
+    # City 7 questions
 
     {
         "category": "city_7",
@@ -391,6 +401,8 @@ questions = [
         ),
         "answer": "Prag",
     },
+
+    # City 8 questions
 
     {
         "category": "city_8",
@@ -452,6 +464,8 @@ questions = [
         "answer": "Buenos Aires",
     },
 
+    # City 9 questions
+
     {
         "category": "city_9",
         "points": 10,
@@ -511,6 +525,8 @@ questions = [
         ),
         "answer": "Johannesburg",
     },
+
+    # City 10 questions
 
     {
         "category": "city_10",

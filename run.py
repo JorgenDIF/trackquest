@@ -42,6 +42,8 @@ def clear():
     else:
         os.system("clear")
 
+# Main function. Short introduction to the game and asks for username.
+
 
 def main():
     delprint("Welcome to Track Quest!")
@@ -75,12 +77,26 @@ def main():
             delprint("Please choose between first class or handcar")
 
 
+main()
+
+# Class for the questions
+
+
 class Question:
     def __init__(self, category, points, text, answer):
         self.category = category
         self.points = points
         self.text = text
         self.answer = answer
+
+        """
+        A questions bank is created from the questions in the" "
+        question_data.py file.
+        The questions are sorted by category and points.
+        Its inspired by Evan Mawyers quiz:
+        https://medium.com/@Evan.mawyer/creating-a-quiz-using-python-oop-object-oriented-programming-3675a0ae687
+
+        """
 
 
 question_bank = []
@@ -93,4 +109,11 @@ for question in questions:
                             question_text, question_answer)
     question_bank.append(new_question)
 
+    # Randomize the order of the cities
 
+cities = list(set(q.category for q in question_bank))
+random.shuffle(cities)
+
+for city in cities:
+    city_questions = [q for q in question_bank if q.category == city]
+    city_questions.sort(key=lambda q: q.points, reverse=True)
