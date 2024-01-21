@@ -42,45 +42,43 @@ def clear():
     else:
         os.system("clear")
 
+
 # Main function. Short introduction to the game and asks for username.
 
 
 def main():
-    delprint("Welcome to Track Quest!")
-    delprint("This game concept is from the swedish TV-show 'På spåret'")
-    delprint("The goal is to guess the city from the clues given")
-    delprint("The game will be played in 5 rounds.")
-    delprint("The rounds goes from 10 points to 2 points.")
-    delprint("You will get only one guess per destination!")
-    delprint("Remeber that a wrong answer will give you zero points!")
-    delprint("Enter your name to continue")
+    delprint(" Welcome to Track Quest!")
+    delprint(" This game concept is from the swedish TV-show 'På spåret'")
+    delprint(" The goal is to guess the city from the clues given")
+    delprint(" The game will be played in 5 rounds.")
+    delprint(" The rounds goes from 10 points to 2 points.")
+    delprint(" You will get only one guess per destination!")
+    delprint(" Remeber that a wrong answer will give you zero points!")
+    delprint(" Enter your name to continue")
 
     while True:
-        player_name = input("Please enter your preferred username: ")
+        player_name = input(" Please enter your preferred username: ")
         if player_name:
             break
-        print("Username can not be empty, please try again.")
+        print(" Username can not be empty, please try again.")
     # Print a blank line for formatting
-    delprint("Welcome " + player_name + "!")
+    delprint(" Welcome " + player_name + "!")
 
     while True:
-        compartment = input("Do you want to sit in first class "
+        compartment = input(" Do you want to sit in first class "
                             "or the handcar?")
         if compartment == "first class":
-            delprint("You have chosen first class")
+            delprint(" You have chosen first class")
             break
         elif compartment == "handcar":
-            delprint("You have chosen the handcar")
+            delprint(" You have chosen the handcar")
             time.sleep(3)
             break
         else:
-            delprint("Please choose between first class or handcar")
+            delprint(" Please choose between first class or handcar")
 
-
-main()
 
 # Class for the questions
-
 
 class Question:
     def __init__(self, category, points, text, answer):
@@ -99,14 +97,23 @@ class Question:
         """
 
 
+# Felsökning: Kontrollera om alla frågor har en 'points'-nyckel
+
+
+for i, question in enumerate(questions):
+    if "points" not in question:
+        print(f"Question {i} does not have a 'points' key: {question}")
+
+
 question_bank = []
 for question in questions:
     question_category = question["category"]
     question_points = question["points"]
     question_text = question["text"]
     question_answer = question["answer"]
-    new_question = Question(question_category, question_points,
-                            question_text, question_answer)
+    new_question = Question(
+        question_category, question_points, question_text, question_answer
+    )
     question_bank.append(new_question)
 
     # Randomize the order of the cities
@@ -117,3 +124,65 @@ random.shuffle(cities)
 for city in cities:
     city_questions = [q for q in question_bank if q.category == city]
     city_questions.sort(key=lambda q: q.points, reverse=True)
+
+
+class Run_game:
+    def __init__(self, question_bank, cities):
+        self.question_bank = question_bank
+        self.cities = cities
+        self.score = 0
+
+    def run(self):
+        for city in self.cities:
+            # Get all questions for this city
+            city_questions = [
+                q for q in self.question_bank if q.category == city]
+
+            # Iterate over each question in order
+            for question in city_questions:
+                # Ask the question and get the user's answer
+                user_answer = input(question.text)
+
+                # Check if the user's answer is correct
+                if user_answer.lower() == question.answer.lower():
+                    print("Correct!")
+                    self.score += question.points
+                    break
+                elif user_answer.lower() != question.answer.lower():
+                    print(
+                        "Incorrect. The correct answer was: ", question.answer)
+                    break  # Move to the next city if the answer is incorrect
+                elif user_answer.lower() == "next":
+                    continue  # Go to the next question within the same city
+            else:
+                # Continue to the next city if all questions have been asked
+                continue
+                # Break the city loop if a ques was answered correct/incorrect
+            break
+
+    class Run_game:
+        def __init__(self, question_bank, cities):
+            self.question_bank = question_bank
+            self.cities = cities
+            self.score = 0
+
+        def run(self):
+            for city in self.cities:
+                city_questions = [q for q in self.question_bank if q.category == city]
+                for question in city_questions:
+                    user_answer = input(question.text)
+                    if user_answer.lower() == question.answer.lower():
+                        print("Correct!")
+                        self.score += question.points
+                        break
+                    elif user_answer.lower() != question.answer.lower():
+                        print
+                        ("Incorrect. The correct answer was:", question.answer)
+                        break
+                    elif user_answer.lower() == "next":
+                        continue
+                else:
+                    continue
+                break
+
+    Run_game(question_bank, cities).run()

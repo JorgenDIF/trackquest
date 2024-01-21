@@ -8,7 +8,7 @@ questions = [
 
     {
         "category": "city_1",
-        "point": 10,
+        "points": 10,
         "text": (
             "Build your city on a rock, said the wise, but our city is built "
             "on sand from another continent. In our city, there's a Don who "
@@ -19,7 +19,7 @@ questions = [
     },
     {
         "category": "city_1",
-        "point": 6,
+        "points": 6,
         "text": (
             "Bad boys are doing their best to serve society in our city. "
             "But maybe it's the girls gone wild during spring break that "
@@ -29,7 +29,7 @@ questions = [
     },
     {
         "category": "city_1",
-        "point": 4,
+        "points": 4,
         "text": (
             "Our city has seen many peculiar fictional murders carried out "
             "by a serial killer who also investigates his own murders. "
@@ -41,7 +41,7 @@ questions = [
     },
     {
         "category": "city_1",
-        "point": 2,
+        "points": 2,
         "text": (
             "If you want to eat oranges and retire, you've come to "
             "the right place, "
@@ -581,3 +581,4 @@ questions = [
         "answer": "Singapore",
     },
 ]
+
