@@ -14,6 +14,7 @@ import random
 from question_data import questions
 
 
+
 # Global variables
 score = 0
 
@@ -97,9 +98,6 @@ class Question:
         """
 
 
-# Felsökning: Kontrollera om alla frågor har en 'points'-nyckel
-
-
 for i, question in enumerate(questions):
     if "points" not in question:
         print(f"Question {i} does not have a 'points' key: {question}")
@@ -121,6 +119,9 @@ for question in questions:
 cities = list(set(q.category for q in question_bank))
 random.shuffle(cities)
 
+# Limit the number of cities to 5 per game
+cities = cities[:5]
+
 for city in cities:
     city_questions = [q for q in question_bank if q.category == city]
     city_questions.sort(key=lambda q: q.points, reverse=True)
@@ -141,48 +142,35 @@ class Run_game:
             # Iterate over each question in order
             for question in city_questions:
                 # Ask the question and get the user's answer
-                user_answer = input(question.text)
+                delprint(question.text)
+                user_answer = input(" Your answer: ")
 
                 # Check if the user's answer is correct
                 if user_answer.lower() == question.answer.lower():
+                    delprint("Your answer is.....")
+                    time.sleep(2)
                     print("Correct!")
+                    delprint("You get " + str(question.points) + " points!")
+                    delprint("Prepare for the next destination!")
                     self.score += question.points
                     break
-                elif user_answer.lower() != question.answer.lower():
-                    print(
-                        "Incorrect. The correct answer was: ", question.answer)
-                    break  # Move to the next city if the answer is incorrect
                 elif user_answer.lower() == "next":
                     continue  # Go to the next question within the same city
+                elif user_answer.lower() != question.answer.lower():
+                    delprint("Your answer is.....")
+                    time.sleep(2)
+                    print("Incorrect!")
+                    delprint("The correct answer was: " + str(question.answer))
+                    delprint("You get 0 points!")
+                    delprint("Prepare for the next destination!")
+                    break  # Move to the next city if the answer is incorrect
+
             else:
                 # Continue to the next city if all questions have been asked
                 continue
                 # Break the city loop if a ques was answered correct/incorrect
-            break
 
-    class Run_game:
-        def __init__(self, question_bank, cities):
-            self.question_bank = question_bank
-            self.cities = cities
-            self.score = 0
 
-        def run(self):
-            for city in self.cities:
-                city_questions = [q for q in self.question_bank if q.category == city]
-                for question in city_questions:
-                    user_answer = input(question.text)
-                    if user_answer.lower() == question.answer.lower():
-                        print("Correct!")
-                        self.score += question.points
-                        break
-                    elif user_answer.lower() != question.answer.lower():
-                        print
-                        ("Incorrect. The correct answer was:", question.answer)
-                        break
-                    elif user_answer.lower() == "next":
-                        continue
-                else:
-                    continue
-                break
 
-    Run_game(question_bank, cities).run()
+game = Run_game(question_bank, cities)
+game.run()
