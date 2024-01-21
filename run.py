@@ -14,9 +14,8 @@ import random
 from question_data import questions
 
 
-
 # Global variables
-score = 0
+SCORE = 0
 
 
 """
@@ -48,26 +47,31 @@ def clear():
 
 
 def main():
-    delprint(" Welcome to Track Quest!")
-    delprint(" This game concept is from the swedish TV-show 'På spåret'")
-    delprint(" The goal is to guess the city from the clues given")
-    delprint(" The game will be played in 5 rounds.")
-    delprint(" The rounds goes from 10 points to 2 points.")
-    delprint(" You will get only one guess per destination!")
-    delprint(" Remeber that a wrong answer will give you zero points!")
-    delprint(" Enter your name to continue")
+    delprint(" Welcome to Track Quest!\n"
+             " Inspired by the Swedish TV-show 'På spåret,'\n"
+             " guess the city in 5 rounds\n"
+             " with points decreasing from 10 to 2.\n"
+             " One guess per destination; a wrong answer gets zero points.\n"
+             " Type 'next' to move down a point level if unsure,\n"
+             " and save your guess to the next point level\n"
+             " Enter your name to begin.")
 
     while True:
-        player_name = input(" Please enter your preferred username: ")
+        player_name = input(" Please enter your preferred username "
+                            "max 10 letters: ")
         if player_name:
-            break
-        print(" Username can not be empty, please try again.")
+            if len(player_name) <= 10:
+                break
+        print(" Please choose a username of max 10 letters.")
     # Print a blank line for formatting
     delprint(" Welcome " + player_name + "!")
 
     while True:
+        delprint(" Choose your if you want to sit in first class or "
+                 " in the handcar. It makes no difference to the game, "
+                 " but it's more fun to choose.")
         compartment = input(" Do you want to sit in first class "
-                            "or the handcar?")
+                            "or the handcar? Choose one to continue: ")
         if compartment == "first class":
             delprint(" You have chosen first class")
             break
@@ -79,9 +83,13 @@ def main():
             delprint(" Please choose between first class or handcar")
 
 
-# Class for the questions
+main()
+
 
 class Question:
+    """
+    A class to represent a question.
+    """
     def __init__(self, category, points, text, answer):
         self.category = category
         self.points = points
@@ -98,69 +106,68 @@ class Question:
         """
 
 
-for i, question in enumerate(questions):
-    if "points" not in question:
-        print(f"Question {i} does not have a 'points' key: {question}")
+class RunGame:
+    def __init__(self, question_list):
 
+        question_bank = []
+        for question in questions:
+            question_category = question["category"]
+            question_points = question["points"]
+            question_text = question["text"]
+            question_answer = question["answer"]
+            new_question = Question(
+                question_category, question_points, question_text,
+                question_answer
+            )
+            question_bank.append(new_question)
 
-question_bank = []
-for question in questions:
-    question_category = question["category"]
-    question_points = question["points"]
-    question_text = question["text"]
-    question_answer = question["answer"]
-    new_question = Question(
-        question_category, question_points, question_text, question_answer
-    )
-    question_bank.append(new_question)
+            # Randomize the order of the cities
 
-    # Randomize the order of the cities
+        cities = list(set(q.category for q in question_bank))
+        random.shuffle(cities)
 
-cities = list(set(q.category for q in question_bank))
-random.shuffle(cities)
+        # Limit the number of cities to 5 per game
+        cities = cities[:5]
 
-# Limit the number of cities to 5 per game
-cities = cities[:5]
+        for city in cities:
+            city_questions = [q for q in question_bank if q.category == city]
+            city_questions.sort(key=lambda q: q.points, reverse=True)
 
-for city in cities:
-    city_questions = [q for q in question_bank if q.category == city]
-    city_questions.sort(key=lambda q: q.points, reverse=True)
-
-
-class Run_game:
-    def __init__(self, question_bank, cities):
-        self.question_bank = question_bank
-        self.cities = cities
+        self.inner_question_bank = question_bank
+        self.inner_cities = cities
         self.score = 0
 
     def run(self):
-        for city in self.cities:
+        for inner_city in self.inner_cities:
             # Get all questions for this city
-            city_questions = [
-                q for q in self.question_bank if q.category == city]
+            inner_city_questions = [
+                q for q in self.inner_question_bank if q.category == inner_city
+            ]
 
             # Iterate over each question in order
-            for question in city_questions:
+            for inner_question in inner_city_questions:
                 # Ask the question and get the user's answer
-                delprint(question.text)
-                user_answer = input(" Your answer: ")
+                delprint(inner_question.text)
+                user_answer = input(" Your answer or type next: ")
 
                 # Check if the user's answer is correct
-                if user_answer.lower() == question.answer.lower():
+                if user_answer.lower() == inner_question.answer.lower():
                     delprint("Your answer is.....")
                     time.sleep(2)
                     print("Correct!")
-                    delprint("You get " + str(question.points) + " points!")
+                    delprint("You get " + str
+                             (inner_question.points) + " points!")
                     delprint("Prepare for the next destination!")
-                    self.score += question.points
+                    self.score += inner_question.points
                     break
                 elif user_answer.lower() == "next":
                     continue  # Go to the next question within the same city
-                elif user_answer.lower() != question.answer.lower():
+                else:
                     delprint("Your answer is.....")
                     time.sleep(2)
                     print("Incorrect!")
-                    delprint("The correct answer was: " + str(question.answer))
+                    delprint("The correct answer was: " + str
+                             (inner_question.answer))
                     delprint("You get 0 points!")
                     delprint("Prepare for the next destination!")
                     break  # Move to the next city if the answer is incorrect
@@ -171,6 +178,5 @@ class Run_game:
                 # Break the city loop if a ques was answered correct/incorrect
 
 
-
-game = Run_game(question_bank, cities)
+game = RunGame(questions)
 game.run()
