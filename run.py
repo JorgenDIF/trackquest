@@ -212,7 +212,7 @@ class RunGame:
                 elif self.score >= 20:
                     self.delprint("You got an ok score. Try again!")
                 elif self.score <= 10:
-                    self.delprint("Did you payt attention in your geography"
+                    self.delprint("Did you pay attention in your geography"
                                   " classes? Try again!")
                 print("Do you want to play again?")
                 user_input = input("Enter yes or no: ")
