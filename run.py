@@ -80,11 +80,18 @@ class RunGame:
                       " Choose a username to begin.")
 
         while True:
-            player_name = input(" Please enter your preferred username "
-                                "max 10 letters: ")
-            if player_name:
-                if len(player_name) <= 10:
-                    break
+            try:
+                player_name = input(" Please enter your preferred username "
+                                    "max 10 letters: ")
+                if not player_name:
+                    raise ValueError(" Username can't be empty")
+                if len(player_name) > 10:
+                    raise ValueError(" Username can't be longer"
+                                     "than 10 letters")
+                self.player_name = player_name
+                break
+            except ValueError as e:
+                print(e)
             print(" Please choose a username of max 10 letters.")
         # Print a blank line for formatting
         self.delprint(" Welcome " + player_name + "!")
@@ -106,8 +113,9 @@ class RunGame:
 
     def __init__(self, question_list):
         self.question_list = question_list
+        self.player_name = None
 
-        question_bank = []
+        self.question_bank = []
         for question in self.question_list:
             question_category = question["category"]
             question_points = question["points"]
@@ -117,21 +125,26 @@ class RunGame:
                 question_category, question_points, question_text,
                 question_answer
             )
-            question_bank.append(new_question)
+            self.question_bank.append(new_question)
 
             # Randomize the order of the cities
 
-        cities = list(set(q.category for q in question_bank))
+        cities = list(set(q.category for q in self.question_bank))
         random.shuffle(cities)
 
         # Limit the number of cities to 5 per game
         cities = cities[:5]
 
+        # Existing code
         for city in cities:
-            city_questions = [q for q in question_bank if q.category == city]
+            city_questions = [
+                q for q in self.question_bank if q.category == city]
             city_questions.sort(key=lambda q: q.points, reverse=True)
-
-        self.inner_question_bank = question_bank
+            self.question_bank = [
+                q for q in self.question_bank
+                if q.category != city
+                ] + city_questions
+        self.inner_question_bank = self.question_bank
         self.inner_cities = cities
         self.score = 0
         self.cities_visited = 0
@@ -161,60 +174,86 @@ class RunGame:
             inner_city_questions = [
                 q for q in self.inner_question_bank if q.category == inner_city
             ]
-
-            # Iterate over each question in order
             for inner_question in inner_city_questions:
+                # Show the current score
+                self.delprint("Your current score is: " + str(self.score))
+                time.sleep(2)
                 # Ask the question and get the user's answer
                 self.clear()
-                self.delprint(" Where are we heading?")
+                self.delprint("Where are we heading?")
                 print(inner_question.text)
-                user_answer = input(" Your answer or type next: ")
-
+                while True:
+                    try:
+                        user_answer = input(" Your answer or type next: ")
+                        if not user_answer:
+                            raise ValueError(" Please " + self.player_name +
+                                             ", enter an answer or type next")
+                        break  # If the input is valid, break out of the loop
+                    except ValueError as e:
+                        print(e)
                 # Check if the user's answer is correct
                 if user_answer.lower() == inner_question.answer.lower():
                     self.delprint(" Your answer is.....")
                     time.sleep(2)
-                    print("Correct!")
-                    self.delprint(" You get " + str
+                    print(" Correct!")
+                    self.delprint("You get " + str
                                   (inner_question.points) + " points!")
-                    self.delprint("Your current score is: " + str(self.score))
-                    self.delprint(" Prepare for the next destination!")
                     self.score += inner_question.points
+                    self.delprint(" Your current score is: " + str(self.score))
+                    self.delprint(" Prepare for the next destination!")
+
                     break
-                elif user_answer.lower() == "next":
-                    continue  # Go to the next question within the same city
                 else:
-                    self.delprint("Your answer is.....")
+                    self.delprint(" Your answer is.....")
                     time.sleep(2)
-                    print("Incorrect!")
-                    self.delprint("The correct answer was: " + str
+                    print(" Incorrect!")
+                    self.delprint(" The correct answer was: " + str
                                   (inner_question.answer))
                     self.delprint(" You get 0 points!")
-                    self.delprint("Your current score is: " + str(self.score))
                     self.delprint(" Prepare for the next destination!")
                     break  # Move to the next city if the answer is incorrect
 
-                # Increase the counter each time a city has been visited
+            # Increase the counter each time a city is visited
             self.cities_visited += 1
 
             # Check if all cities have been visited
             if self.cities_visited == len(self.inner_cities):
-                print("You have visited all cities!")
-                print("Your final score is: " + str(self.score))
+                self.clear()
+                print(" You have visited all cities!")
+                print(" Your final score is: " + str(self.score))
                 if self.score == 50:
-                    self.delprint("Congratulations! You got a perfect score!"
+                    self.delprint(" Congratulations!" + str(self.player_name) +
+                                  " You got a perfect score!"
                                   "  You  should be on the show!")
                 elif self.score >= 30:
-                    self.delprint("Congratulations! You got a good score!")
+                    self.delprint(" Congratulations!" + str(self.player_name) +
+                                  " You got a good score!")
                 elif self.score >= 20:
-                    self.delprint("You got an ok score. Try again!")
+                    self.delprint(" You got an ok score."
+                                  + str(self.player_name) +
+                                  " Try again!")
                 elif self.score >= 10:
-                    self.delprint("Did you payt attention in your geography"
-                                  " classes? Try again!")
-                print("Do you want to play again?")
-                if input("Type 'yes' to play again: ") == "yes":
+                    self.delprint(" Did you pay attention in your geography"
+                                  " classes?" + str(self.player_name) +
+                                  " Try again!")
+                print(" Please enter yes or no")
+                user_input = input(" Do you want to play again?"
+                                   " yes/no: ").lower()
+                while user_input not in ["yes", "no"]:
+                    print(" Invalid input. Please enter yes or no")
+                    user_input = input(" Do you want to play again?"
+                                       "yes/no: ").lower()
+
+                if user_input == "yes":
                     self.restart()
-                break  # End the game
+                elif user_input == "no":
+                    self.clear()
+            self.delprint(" Thank you for playing! Hope to see you again"
+                          " soon! If you want to try a Swedish version of"
+                          " the game, please visit: "
+                          " Pasparetbloggen to try it out!"
+                          " and you can play the real game!")
+            return  # End the game
 
     def restart(self):
         """Method to restart the game."""
