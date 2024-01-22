@@ -55,7 +55,7 @@ class RunGame:
         else:
             os.system("clear")
 
-    def delprint(self, text, delay_time=0.1):
+    def delprint(self, text, delay_time=0.04):
         """
         Function to print text with a delay between each character.
         Credit to: https://replit.com/talk/learn/The-Slow-Print/44741
@@ -67,6 +67,10 @@ class RunGame:
         print()  # make a new line
 
     def intro(self):
+        """Prints the introduction to the game and asks the user
+        for their name. Also a choice between first classhand or handcar.
+        It´s just for fun and has no impact on the game.
+        """
         self.clear()
 
         self.delprint(" Welcome to Track Quest!\n"
@@ -77,7 +81,7 @@ class RunGame:
                       "a wrong answer gets zero points.\n"
                       " Type 'next' to move down a point level if unsure,\n"
                       " and save your guess to the next point level\n"
-                      " Enter your name to begin.")
+                      " Choose a username to begin.")
 
         while True:
             player_name = input(" Please enter your preferred username "
@@ -88,6 +92,21 @@ class RunGame:
             print(" Please choose a username of max 10 letters.")
         # Print a blank line for formatting
         self.delprint(" Welcome " + player_name + "!")
+
+        while True:
+            self.delprint(" Choose if you want to sit in first class or\n"
+                          " in the handcar. It makes no difference \n"
+                          " to the game, but it's more fun to choose.")
+            compartment = input(" Do you want to sit in first class\n"
+                                " or the handcar? Choose one to continue: ")
+            if compartment == "first class":
+                self.delprint(" You have chosen first class")
+                break
+            if compartment == "handcar":
+                self.delprint(" You have chosen the handcar")
+                time.sleep(3)
+                break
+            self.delprint(" Please choose between first class or handcar")
 
     def __init__(self, question_list):
         self.question_list = question_list
@@ -149,7 +168,7 @@ class RunGame:
             # Iterate over each question in order
             for inner_question in inner_city_questions:
                 # Ask the question and get the user's answer
-                self.delprint("Where are we heading?")
+                self.delprint(" Where are we heading?")
                 print(inner_question.text)
                 user_answer = input(" Your answer or type next: ")
 

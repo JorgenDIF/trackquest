@@ -10,7 +10,7 @@ questions = [
         "category": "city_1",
         "points": 10,
         "text": (
-          " Where are we heading? 10 points\n"
+          " 10 points\n"
           " This city is often hailed as the best for witnessing\n"
           " some of the ocean's inest creatures. Anonymous travel\n"
           " is popular to this destination"
@@ -21,9 +21,10 @@ questions = [
 
     {
        "category": "city_1",
-       "points": 10,
+       "points": 8,
        "text": (
-          " 8 points.  Build your city on a rock, said the wise,\n"
+          " 8 points.\n"
+          " Build your city on a rock, said the wise,\n"
           " but our city is built on sand from another continent.\n"
           " In our city, there's a Don who is not a godfather,\n"
           " rather the opposite –  but he still drives a Ferrari."
@@ -35,7 +36,7 @@ questions = [
         "category": "city_1",
         "points": 6,
         "text": (
-            "6 Points\n"
+            " 6 Points\n"
             " Bad boys are doing their best to serve society in our city.\n"
             " But maybe it's the girls gone wild during spring break that\n"
             " made Sisqo want to make TV here."
@@ -46,7 +47,7 @@ questions = [
         "category": "city_1",
         "points": 4,
         "text": (
-            "4 points\n"
+            " 4 points\n"
             " Our city has seen many peculiar fictional murders carried out\n"
             " by a serial killer who also investigates his own murders.\n"
             " Spanish is a second language in our American city, what do\n"
@@ -59,7 +60,7 @@ questions = [
         "category": "city_1",
         "points": 2,
         "text": (
-            "2 points\n"
+            " 2 points\n"
             " If you want to eat oranges and retire, you've come to\n"
             " the right place, "
             " Key West and South Beach are neighbors with our city\n",
@@ -74,8 +75,8 @@ questions = [
         "category": "city_2",
         "points": 10,
         "text": (
-            " Where are we heading? 10 points. We leave\n"
-            " zebra-inspired architecture in one\n"
+            " 10 points.\n"
+            " We leave zebra-inspired architecture in one\n"
             " of the country's oldest, heading towards a city where a lord \n"
             " has added a starting city.\n"
             " Indie pop is a clue that fits like a glove."
@@ -86,7 +87,8 @@ questions = [
         "category": "city_2",
         "points": 8,
         "text": (
-            " 8 points. Balter resides at one end of our city,\n"
+            " 8 points.\n"
+            " Balter resides at one end of our city,\n"
             " a heavily loaded German at\n"
             " the other, and in the middle stands\n"
             " a red revolutionary. A Dutchman\n"
@@ -99,7 +101,8 @@ questions = [
         "category": "city_2",
         "points": 6,
         "text": (
-            " 6 points.Remove the short name from the\n"
+            " 6 points.\n"
+            " Remove the short name from the\n"
             " 42-kilometer race from the tattooed\n"
             " girl, and you get a football\n"
             " profile in our city. Frozen water from\n"
@@ -137,7 +140,7 @@ questions = [
         "category": "city_3",
         "points": 10,
         "text": (
-            " Where are we heading? 10 points.\n"
+            " 10 points.\n"
             " We leave the erudite in a cattle cart and\n"
             " follow the river towards a distant smoke in the east.\n"
             " In the next harbor, the destination is also\n"
@@ -207,7 +210,7 @@ questions = [
         "category": "city_4",
         "points": 10,
         "text": (
-            " Where are we heading? 10 points/n"
+            " 10 points/n"
             " We leave poetic meters on the west\n"
             " side and journey towards the east side, to a city where\n"
             " you also call home.\n"
@@ -273,7 +276,7 @@ questions = [
         "category": "city_5",
         "points": 10,
         "text": (
-            " Where are we heading? 10 points \n"
+            " 10 points \n"
             " We leave the former book collection\n"
             " and journey south through a pentagonal land.\n"
             " In the central parts of our city, the air is polluted."
@@ -330,7 +333,7 @@ questions = [
         "category": "city_6",
         "points": 10,
         "text": (
-            " Where are we heading? 10 points \n"
+            " 10 points \n"
             " We depart from a fortified city in\n"
             " the south, whose initials also initiate\n"
             " a region, the fifth city of which is our target. On our\n"
@@ -394,7 +397,7 @@ questions = [
         "category": "city_7",
         "points": 10,
         "text": (
-            " Where are we heading? 10 points \n"
+            " 10 points \n"
             " We leave a famous trial in the west\n"
             " and head east towards a city where a legally protected\n"
             " sacred scripture originated. The gravestone for\n"
@@ -453,7 +456,7 @@ questions = [
         "category": "city_8",
         "points": 10,
         "text": (
-            " Where are we heading. 10 points \n"
+            " 10 points \n"
             " We travel along the silver\n"
             " river's milonga shores and search for\n"
             " the city with the fresh air.\n"
@@ -521,7 +524,7 @@ questions = [
         "category": "city_9",
         "points": 10,
         "text": (
-            " Where are we heading?10 points\n"
+            " 10 points\n"
             " We leave the urban harbor\n"
             " city starting with 'D' and travel north towards\n"
             " a city on and with stripes.\n"
@@ -588,7 +591,7 @@ questions = [
         "category": "city_10",
         "points": 10,
         "text": (
-            " Where are we heading? 10 points\n"
+            " 10 points\n"
             " We leave the twin city\n"
             " and set our sights on highs in lowland,\n"
             " where many goods have been,\n"
