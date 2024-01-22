@@ -18,69 +18,6 @@ from question_data import questions
 SCORE = 0
 
 
-def delprint(text, delay_time=0.1):
-    """
-Function to print text with a delay between each character.
-Credit to: https://replit.com/talk/learn/The-Slow-Print/44741
-"""
-    for character in text:
-        sys.stdout.write(character)  # writes the character
-        sys.stdout.flush()
-        time.sleep(delay_time)  # this is the delay time between each
-    print()  # make a new line
-
-
-def clear():
-    """Clears the screen based on the user's operating system."""
-    # for Windows
-    if os.name == "nt":
-        os.system("cls")
-    # for Mac and Linux (here, os.name is 'posix')
-    else:
-        os.system("clear")
-
-
-def main():
-    """ Main function to run the game"""
-    delprint(" Welcome to Track Quest!\n"
-             " Inspired by the Swedish TV-show 'På spåret,'\n"
-             " guess the city in 5 rounds\n"
-             " with points decreasing from 10 to 2.\n"
-             " One guess per destination; a wrong answer gets zero points.\n"
-             " Type 'next' to move down a point level if unsure,\n"
-             " and save your guess to the next point level\n"
-             " Enter your name to begin.")
-
-    while True:
-        player_name = input(" Please enter your preferred username "
-                            "max 10 letters: ")
-        if player_name:
-            if len(player_name) <= 10:
-                break
-        print(" Please choose a username of max 10 letters.")
-    # Print a blank line for formatting
-    delprint(" Welcome " + player_name + "!")
-
-    while True:
-        print(" Choose if you want to sit in first class or\n"
-              " in the handcar. It makes no difference to the game,\n"
-              " but it's more fun to choose.")
-        compartment = input(" Do you want to sit in first class\n"
-                            " or the handcar? Choose one to continue: ")
-        if compartment == "first class":
-            delprint(" You have chosen first class")
-            break
-        elif compartment == "handcar":
-            delprint(" You have chosen the handcar")
-            time.sleep(3)
-            break
-        else:
-            delprint(" Please choose between first class or handcar")
-
-
-main()
-
-
 class Question:
     """
     A class to represent a question.
@@ -107,17 +44,51 @@ class RunGame:
     https://github.com/sampathbasa/quiz-app/tree/main.
     Changes have been made to the original code to fit this game.
     Some suggestions from my mentor have also been
-    implemented to improve the code.
+    implemented to improve the code. """
 
-    Attributes:
-        question_list (list): A list of dictionaries where
-        each dictionary represents   a question.
+    def clear(self):
+        """Clears the screen based on the user's operating system."""
+        # for Windows
+        if os.name == "nt":
+            os.system("cls")
+        # for Mac and Linux (here, os.name is 'posix')
+        else:
+            os.system("clear")
 
-    Args:
-        question_list (list): A list of dictionaries where
-                     each dictionary represents a question.
+    def delprint(self, text, delay_time=0.1):
+        """
+        Function to print text with a delay between each character.
+        Credit to: https://replit.com/talk/learn/The-Slow-Print/44741
+        """
+        for character in text:
+            sys.stdout.write(character)  # writes the character
+            sys.stdout.flush()
+            time.sleep(delay_time)  # this is the delay time between each
+        print()  # make a new line
 
-    """
+    def intro(self):
+        self.clear()
+
+        self.delprint(" Welcome to Track Quest!\n"
+                      " Inspired by the Swedish TV-show 'På spåret,'\n"
+                      " guess the city in 5 rounds\n"
+                      " with points decreasing from 10 to 2.\n"
+                      " One guess per destination;"
+                      "a wrong answer gets zero points.\n"
+                      " Type 'next' to move down a point level if unsure,\n"
+                      " and save your guess to the next point level\n"
+                      " Enter your name to begin.")
+
+        while True:
+            player_name = input(" Please enter your preferred username "
+                                "max 10 letters: ")
+            if player_name:
+                if len(player_name) <= 10:
+                    break
+            print(" Please choose a username of max 10 letters.")
+        # Print a blank line for formatting
+        self.delprint(" Welcome " + player_name + "!")
+
     def __init__(self, question_list):
         self.question_list = question_list
 
@@ -178,29 +149,30 @@ class RunGame:
             # Iterate over each question in order
             for inner_question in inner_city_questions:
                 # Ask the question and get the user's answer
-                delprint(inner_question.text)
+                self.delprint("Where are we heading?")
+                print(inner_question.text)
                 user_answer = input(" Your answer or type next: ")
 
                 # Check if the user's answer is correct
                 if user_answer.lower() == inner_question.answer.lower():
-                    delprint("Your answer is.....")
+                    self.delprint(" Your answer is.....")
                     time.sleep(2)
                     print("Correct!")
-                    delprint("You get " + str
-                             (inner_question.points) + " points!")
-                    delprint("Prepare for the next destination!")
+                    self.delprint(" You get " + str
+                                  (inner_question.points) + " points!")
+                    self.delprint(" Prepare for the next destination!")
                     self.score += inner_question.points
                     break
                 elif user_answer.lower() == "next":
                     continue  # Go to the next question within the same city
                 else:
-                    delprint("Your answer is.....")
+                    self.delprint("Your answer is.....")
                     time.sleep(2)
                     print("Incorrect!")
-                    delprint("The correct answer was: " + str
-                             (inner_question.answer))
-                    delprint("You get 0 points!")
-                    delprint("Prepare for the next destination!")
+                    self.delprint("The correct answer was: " + str
+                                  (inner_question.answer))
+                    self.delprint(" You get 0 points!")
+                    self.delprint(" Prepare for the next destination!")
                     break  # Move to the next city if the answer is incorrect
 
             else:
@@ -210,4 +182,5 @@ class RunGame:
 
 
 game = RunGame(questions)
+game.intro()
 game.run()
