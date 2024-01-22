@@ -14,17 +14,6 @@ import random
 from question_data import questions
 
 
-class Question:
-    """
-    A class to represent a question.
-    """
-    def __init__(self, category, points, text, answer):
-        self.category = category
-        self.points = points
-        self.text = text
-        self.answer = answer
-
-
 class RunGame:
     """A class to represent the game.
 
@@ -41,6 +30,16 @@ class RunGame:
     Changes have been made to the original code to fit this game.
     Some suggestions from my mentor have also been
     implemented to improve the code. """
+
+    class Question:
+        """
+        A class to represent a question.
+        """
+        def __init__(self, category, points, text, answer):
+            self.category = category
+            self.points = points
+            self.text = text
+            self.answer = answer
 
     def clear(self):
         """Clears the screen based on the user's operating system."""
@@ -121,7 +120,7 @@ class RunGame:
             question_points = question["points"]
             question_text = question["text"]
             question_answer = question["answer"]
-            new_question = Question(
+            new_question = self.Question(
                 question_category, question_points, question_text,
                 question_answer
             )

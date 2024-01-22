@@ -1,4 +1,25 @@
+Track Quiz
+
+<a id=introduction></a>
+
+Welcome to Track Quest!\
+This is a Trivia Quiz which will take you on journeys across the world.\
+It´s inspired from the swedish tv-show "På Spåret".\
+You will visit 5 random cities and every city has 5 levels/questions.\
+Decreasing from 10 points down to 2 points.\
+Your mission is to guess which the city is.\
+You will be given cluess on every level which gets easier and easier.\
+You have only one guess per destination so use it wisely!\
+A wrong answer will give you 0 points.\
+So if your ready to visit exciting cities across the world\
+and get exciting and learning facts try it out
+
+
+
+
+
 # Content
+
 
 **Table of content:**
 
@@ -32,8 +53,8 @@
   - [Deployment To Heroku](#depoyment-to-heroku)
 - [Credit](#credit)
   - [Content](#credit-content)
-  - [Images][def2]
-  - [Thank You][def]
+  - [Images](#def2)
+  - [Thank You](#def)
 
 
 <a id="responsive">
