@@ -62,8 +62,8 @@ questions = [
             "2 points\n"
             " If you want to eat oranges and retire, you've come to\n"
             " the right place, "
-            " Key West and South Beach are neighbors with our city, so relax,\n"
-            " you're now in ____!"
+            " Key West and South Beach are neighbors with our city\n",
+            " so relax, you're now in ____!"
         ),
         "answer": "Miami",
     },
@@ -114,8 +114,8 @@ questions = [
         "points": 4,
         "text": (
             "4 points.\n"
-            " Freshly groomed slopes and striped cotton fabric bring you this\n"
-            " industrial city situated between\n"
+            " Freshly groomed slopes and striped cotton\n"
+            " fabric bring you this industrial city situated between\n"
             " Liverpool and Leeds. We're looking\n"
             " for the hometown of The Smiths, Oasis, and Joy Division."
         ),
@@ -179,8 +179,9 @@ questions = [
         "points": 4,
         "text": (
             "4 points.\n"
-            " In the arsenal,several substantial pieces with gunpowder in the\n"
-            " barrel have been active;one was named Fredrik, another Thierry.\n"
+            " In the arsenal, several substantial pieces\n"
+            " with gunpowder in the barrel have been active;\n"
+            " one was named Fredrik, another Thierry.\n"
             " Tell me, has Big Ben become any wiser with time?\n"
             " No, he's 'anciently unwise.'\n"
             " Haha, that was said with perfect timing."
@@ -334,7 +335,8 @@ questions = [
             " the south, whose initials also initiate\n"
             " a region, the fifth city of which is our target. On our\n"
             " journey northward, we pass beach after\n"
-            " beach before reaching our coastless city with significant allure."
+            " beach before reaching our coastless\n"
+            " city with significant allure."
         ),
         "answer": "Orlando",
     },
@@ -505,7 +507,8 @@ questions = [
         "points": 2,
         "text": (
             "2 points \n"
-            " If Arjen Robben joins in, an enraged Tina turns into an anagram\n"
+            " If Arjen Robben joins in, an enraged\n"
+            " Tina turns into an anagram\n"
             " for both the capital of the country and the tango,\n"
             " situated by the shores of the Rio de la Plata."
         ),

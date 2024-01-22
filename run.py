@@ -67,11 +67,11 @@ def main():
     delprint(" Welcome " + player_name + "!")
 
     while True:
-        delprint(" Choose your if you want to sit in first class or "
-                 " in the handcar. It makes no difference to the game, "
-                 " but it's more fun to choose.")
-        compartment = input(" Do you want to sit in first class "
-                            "or the handcar? Choose one to continue: ")
+        print(" Choose if you want to sit in first class or\n"
+              " in the handcar. It makes no difference to the game,\n"
+              " but it's more fun to choose.")
+        compartment = input(" Do you want to sit in first class\n"
+                            " or the handcar? Choose one to continue: ")
         if compartment == "first class":
             delprint(" You have chosen first class")
             break
@@ -108,9 +108,10 @@ class Question:
 
 class RunGame:
     def __init__(self, question_list):
+        self.question_list = question_list
 
         question_bank = []
-        for question in questions:
+        for question in self.question_list:
             question_category = question["category"]
             question_points = question["points"]
             question_text = question["text"]
