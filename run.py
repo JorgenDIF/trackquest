@@ -18,14 +18,11 @@ from question_data import questions
 SCORE = 0
 
 
-"""
+def delprint(text, delay_time=0.1):
+    """
 Function to print text with a delay between each character.
 Credit to: https://replit.com/talk/learn/The-Slow-Print/44741
 """
-
-
-def delprint(text, delay_time=0.1):
-    # Delayed printing function
     for character in text:
         sys.stdout.write(character)  # writes the character
         sys.stdout.flush()
@@ -33,8 +30,8 @@ def delprint(text, delay_time=0.1):
     print()  # make a new line
 
 
-# Clears the screen based on the user's operating system.
 def clear():
+    """Clears the screen based on the user's operating system."""
     # for Windows
     if os.name == "nt":
         os.system("cls")
@@ -43,10 +40,8 @@ def clear():
         os.system("clear")
 
 
-# Main function. Short introduction to the game and asks for username.
-
-
 def main():
+    """ Main function to run the game"""
     delprint(" Welcome to Track Quest!\n"
              " Inspired by the Swedish TV-show 'På spåret,'\n"
              " guess the city in 5 rounds\n"
@@ -96,17 +91,33 @@ class Question:
         self.text = text
         self.answer = answer
 
-        """
-        A questions bank is created from the questions in the" "
-        question_data.py file.
-        The questions are sorted by category and points.
-        Its inspired by Evan Mawyers quiz:
-        https://medium.com/@Evan.mawyer/creating-a-quiz-using-python-oop-object-oriented-programming-3675a0ae687
-
-        """
-
 
 class RunGame:
+    """A class to represent the game.
+
+    This class takes a list of questions as input
+    and creates a list of Question objects from
+    the input list. It also creates a list of cities
+    from the input list, randomizes the order of the cities, and sorts the
+    questions by points using a lambda function. I learned about lambda
+    functions studying the following website:
+    https://sparkbyexamples.com/python/sort-using-lambda-in-python/amp/
+
+    The main idea is inspired by
+    https://github.com/sampathbasa/quiz-app/tree/main.
+    Changes have been made to the original code to fit this game.
+    Some suggestions from my mentor have also been
+    implemented to improve the code.
+
+    Attributes:
+        question_list (list): A list of dictionaries where
+        each dictionary represents   a question.
+
+    Args:
+        question_list (list): A list of dictionaries where
+                     each dictionary represents a question.
+
+    """
     def __init__(self, question_list):
         self.question_list = question_list
 
@@ -139,6 +150,25 @@ class RunGame:
         self.score = 0
 
     def run(self):
+        """
+        Runs the game.
+        This method iterates over each city in`self.inner_cities`.
+        For each city, it retrieves all questions associated with
+        that city from `self.inner_question_bank`.  It then asks
+        each question in order,accepting user input for the answer.
+
+        If the user's answer is correct, they are awarded
+        points (added to `self.score`)and the game moves on to the next city.
+        If the user's answer is incorrect, they are not awarded any
+        points and the game also moves on to the next city.
+        If the user types 'next', the game skips to the next
+        question within the same city.
+
+        Note: This method uses the `delprint` function to print
+        messages to the user.  It also uses the `time.sleep`
+        function to pause execution of the game for a
+        short period of time after certain actions.
+    """
         for inner_city in self.inner_cities:
             # Get all questions for this city
             inner_city_questions = [
