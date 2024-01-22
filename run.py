@@ -168,6 +168,7 @@ class RunGame:
             # Iterate over each question in order
             for inner_question in inner_city_questions:
                 # Ask the question and get the user's answer
+                self.clear()
                 self.delprint(" Where are we heading?")
                 print(inner_question.text)
                 user_answer = input(" Your answer or type next: ")
