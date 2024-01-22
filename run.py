@@ -14,10 +14,6 @@ import random
 from question_data import questions
 
 
-# Global variables
-SCORE = 0
-
-
 class Question:
     """
     A class to represent a question.
@@ -138,6 +134,7 @@ class RunGame:
         self.inner_question_bank = question_bank
         self.inner_cities = cities
         self.score = 0
+        self.cities_visited = 0
 
     def run(self):
         """
@@ -180,6 +177,7 @@ class RunGame:
                     print("Correct!")
                     self.delprint(" You get " + str
                                   (inner_question.points) + " points!")
+                    self.delprint("Your current score is: " + str(self.score))
                     self.delprint(" Prepare for the next destination!")
                     self.score += inner_question.points
                     break
@@ -192,13 +190,37 @@ class RunGame:
                     self.delprint("The correct answer was: " + str
                                   (inner_question.answer))
                     self.delprint(" You get 0 points!")
+                    self.delprint("Your current score is: " + str(self.score))
                     self.delprint(" Prepare for the next destination!")
                     break  # Move to the next city if the answer is incorrect
 
-            else:
-                # Continue to the next city if all questions have been asked
-                continue
-                # Break the city loop if a ques was answered correct/incorrect
+                # Increase the counter each time a city has been visited
+            self.cities_visited += 1
+
+            # Check if all cities have been visited
+            if self.cities_visited == len(self.inner_cities):
+                print("You have visited all cities!")
+                print("Your final score is: " + str(self.score))
+                if self.score == 50:
+                    self.delprint("Congratulations! You got a perfect score!"
+                                  "  You  should be on the show!")
+                elif self.score >= 30:
+                    self.delprint("Congratulations! You got a good score!")
+                elif self.score >= 20:
+                    self.delprint("You got an ok score. Try again!")
+                elif self.score >= 10:
+                    self.delprint("Did you payt attention in your geography"
+                                  " classes? Try again!")
+                print("Do you want to play again?")
+                if input("Type 'yes' to play again: ") == "yes":
+                    self.restart()
+                break  # End the game
+
+    def restart(self):
+        """Method to restart the game."""
+        self.score = 0
+        self.cities_visited = 0
+        self.run()
 
 
 game = RunGame(questions)
