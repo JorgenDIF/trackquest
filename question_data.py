@@ -62,8 +62,8 @@ questions = [
         "text": (
             " 2 points\n"
             " If you want to eat oranges and retire, you've come to\n"
-            " the right place, "
-            " Key West and South Beach are neighbors with our city\n",
+            " the right place,\n"
+            " Key West and South Beach are neighbors with our city,\n"
             " so relax, you're now in ____!"
         ),
         "answer": "Miami",
@@ -403,7 +403,7 @@ questions = [
             " sacred scripture originated. The gravestone for\n"
             " livestock holds economic significance here."
         ),
-        "answer": "Prag",
+        "answer": "Prague",
     },
     {
         "category": "city_7",
@@ -413,7 +413,7 @@ questions = [
             " In this literary metropolis, America cuts to the chase,\n"
             " where upholstery fabric has revolutionized the country."
         ),
-        "answer": "Prag",
+        "answer": "Prague",
     },
     {
         "category": "city_7",
@@ -424,7 +424,7 @@ questions = [
             " On Kalle's Bridge, the Swedish army once fought,\n"
             " and Charta 77 may have its origins here."
         ),
-        "answer": "Prag",
+        "answer": "Prague",
     },
     {
         "category": "city_7",
@@ -436,7 +436,7 @@ questions = [
             " Have a drink of the country's famous beer,\n"
             " and you'll surely get hit on."
         ),
-        "answer": "Prag",
+        "answer": "Prague",
     },
     {
         "category": "city_7",
@@ -447,7 +447,7 @@ questions = [
             " Slovakia, one can pay with checks again.\n"
             " Now we put a 'P' on it this time!"
         ),
-        "answer": "Prag",
+        "answer": "Prague",
     },
 
     # City 8 questions
