@@ -18,7 +18,12 @@ from question_data import questions
 
 class Question:
     """
-    A class to represent a question.
+    Args:
+    category (str): The category or"
+    "destination associated with the question.
+    points (int): The point value assigned to the question.
+    text (str): The text of the trivia question.
+    answer (str): The correct answer to the trivia question.
     """
     def __init__(self, category, points, text, answer):
         self.category = category
@@ -28,21 +33,30 @@ class Question:
 
 
 class RunGame:
-    """A class to represent the game.
+    """
+    A class to represent the game.
 
-    This class takes a list of questions as input
-    and creates a list of Question objects from
-    the input list. It also creates a list of cities
-    from the input list, randomizes the order of the cities, and sorts the
-    questions by points using a lambda function. I learned about lambda
-    functions studying the following website:
-    https://sparkbyexamples.com/python/sort-using-lambda-in-python/amp/
+    Represent the trivia game inspired by 'På spåret.'
 
-    The main idea is inspired by
-    https://github.com/sampathbasa/quiz-app/tree/main.
-    Changes have been made to the original code to fit this game.
-    Some suggestions from my mentor have also been
-    implemented to improve the code. """
+    This class orchestrates the trivia game, taking
+    a list of questions as input
+    and creating Question objects from the input list.
+    It randomizes the order of
+    the cities, sorts questions by points
+    using a lambda function, and facilitates
+    the gameplay.
+
+    The main inspiration for the game comes from
+    the 'På spåret' TV show, and some
+    ideas were adapted from the following sources:
+    - https://github.com/sampathbasa/quiz-app/tree/main
+    - https://sparkbyexamples.com/python/sort-using-lambda-in-python/amp/
+
+    Several modifications have been made to tailor the code
+    for this specific game.
+    Recommendations from my mentor have also been
+    incorporated to enhance the code.
+    """
 
     def clear(self):
         """Clears the screen based on the user's operating system."""
@@ -65,9 +79,17 @@ class RunGame:
         print()  # make a new line
 
     def intro(self):
-        """Prints the introduction to the game and asks the user
-        for their name. Also a choice between first classhand or handcar.
-        It´s just for fun and has no impact on the game.
+        """
+       Prints text with a delayed effect, introducing a time delay between
+       each character for a gradual display.
+
+        Parameters:
+        - text (str): The text to be displayed with a delayed effect.
+        - delay_time (float, optional): The duration of the delay between
+        characters (default is 0.04 seconds).
+
+        Credit: The implementation is inspired by
+        https://replit.com/talk/learn/The-Slow-Print/44741.
         """
         self.clear()
 
