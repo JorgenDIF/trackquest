@@ -172,9 +172,10 @@ and get exciting and learning facts try it out
 
 ### Tools
 
-* Lucidcharts : was used to create detailed diagrams outlining the game's structure, parts, and functions
+* Lucidcharts : Was used to create detailed diagrams outlining the game's structure, parts, and functions
 * VSCode: Utilized for writing and editing the Python code
-* 
+* GitHub: Employed for code deployment.
+* Heroku: This project was deployed with Heroku using Code Institute's mock terminal as provided with the Python Essentials template.
 
 <a id="frameworks-libaries">
 
@@ -210,12 +211,52 @@ and get exciting and learning facts try it out
 <a id="deployment-to-github">
 
 ### Deployment To Github
+1. In the upper-right corner of any page, select , then click New repository.
+2. Type a short, memorable name for your repository. ...
+3. Optionally, add a description of your repository. ...
+4. Choose a repository visibility. ...
+5. Select Initialize this repository with a README.
+6. Click Create repository.
+7. Open Visual Studio Code 3.
+8. On the start window, select Clone a repository.
+9. Enter or type the repository location, and then select the Clone button.
+10. If you're not already signed in, you might be prompted to sign into Visual Studio or your GitHub account.
+11. Save in VsCode and commit with source control or use the terminal
+12. Step 1 git commit -a to commit
+13. Step 2 git commit -m "commit message" to push
 
-<a id=credit>
+
+<a id="depoyment-to-heroku">
 
 ### Deployment To Heroku
 
-<a id="depoyment-to-heroku">
+Before deploying to Heroku pip3 freeze > requirements.txt was used to add all the dependencies required to the requirements.txt file. This is required for the game to run on Heroku.
+
+The following steps were then taken:
+
+1. Log in to Heroku or create an account.
+2. On the main page click the button labelled New in the top right corner and from the drop-down menu select "Create New App".
+3. Enter a unique and meaningful app name.
+4. Next select your region.
+5. Click on the Create App button.
+6. Click on the Settings Tab and scroll down to Config Vars.
+7. Click Reveal Config Vars and enter port into the Key box and 8000 into the Value box and click the Add button.
+8. Input CREDS and the content of your Google Sheet API creds file as another config var and click add.
+9. In the next Key box enter OXFORD_API_APP_ID and add your unique ID to the value box.
+10. In the next Key box enter OXFORD_API_APP_KEY and add your unique key to the value box.
+11. Next, scroll down to the Buildpack section click Add Buildpack select Python and click Save Changes
+12. Repeat step 11 to add node.js. Note: The Buildpacks must be in the correct order. If not click and drag them to move into the correct order.
+13. Scroll to the top of the page and choose the Deploy tab.
+14. Select Github as the deployment method.
+15. Confirm you want to connect to GitHub.
+16. Search for the repository name and click the connect button.
+17. Scroll to the bottom of the deploy page and either click Enable Automatic Deploys for automatic deploys or Deploy Branch to deploy manually. Manually deployed branches will need re-deploying each time the repo is updated.
+18. Click View to view the deployed site.
+19. The site is now live and operational.
+
+
+
+<a id=credit>
 
 # Credit
 
