@@ -13,7 +13,11 @@ import os  # for clearing the screen
 import sys  # for printing text with a delay
 import time  # for printing text with a delay
 import random  # for randomizing the order of the cities
+import colorama  # for printing text in color
+from colorama import Fore, Back, Style  # for printing text in color
 from question_data import questions
+
+colorama.init(autoreset=True)
 
 
 class Question:
