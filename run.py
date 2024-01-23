@@ -120,7 +120,7 @@ class RunGame:
             self.delprint(" Choose if you want to sit in first class or\n"
                           " in the handcar. It makes no difference \n"
                           " to the game, but it's more fun to choose.")
-            compartment = input(f" {Fore.BLUE} Do you want to sit in first \n"
+            compartment = input(f"{Fore.BLUE} Do you want to sit in first \n"
                                 " class or the handcar? Choose one to"
                                 "continue: ")
             if compartment == "first class":
@@ -130,7 +130,7 @@ class RunGame:
                 self.delprint(" You have chosen the handcar")
                 time.sleep(3)
                 break
-            print(f" {Back.RED} Please choose between first class or handcar")
+            print(f"{Back.RED} Please choose between first class or handcar")
 
     def __init__(self, question_list):
         self.question_list = question_list
@@ -240,12 +240,12 @@ class RunGame:
             if self.cities_visited == len(self.inner_cities):
                 self.clear()
                 print(f"{Back.GREEN}{Style.BRIGHT} You have visited"
-                      "all cities!")
+                      " all cities!")
                 print(" Your final score is: " + str(self.score))
                 if self.score == 50:
                     self.delprint(" Congratulations! You got a perfect score!"
-                                  "  You  should be on the show!")
-                    print(f" {Fore.LIGHTGREEN_EX} You are a Star!")
+                                  "  You should be on the show!")
+                    print(f"{Fore.LIGHTGREEN_EX} You are a Star!")
                 elif self.score >= 30:
                     self.delprint(" Congratulations! You got a good score!")
                     print(f" {Fore.LIGHTBLUE_EX} Still room for improvement!")
@@ -261,9 +261,11 @@ class RunGame:
                 if user_input == "yes":
                     self.restart()
                 elif user_input == "no":
+                    print(f"{Fore.BLUE} Thanks for playing! Welcome"
+                          "back anytime!")
                     break  # End the game
                 else:
-                    print(f" {Back.RED} Please enter yes or no")
+                    print(f"{Back.RED} Please enter yes or no")
 
     def restart(self):
         """
