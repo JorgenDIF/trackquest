@@ -108,11 +108,11 @@ class RunGame:
 
         while True:
             player_name = input(f"{Fore.BLUE} Please enter your"
-                                " preferred username max 10 letters: \n ")
+                                " preferred username max 10 letters: ")
             if player_name:
                 if len(player_name) <= 10:
                     break
-            print(" Please choose a username of max 10 letters.")
+            print(f" {Back.RED} Please choose a username of max 10 letters.")
         # Print a blank line for formatting
         self.delprint(f" Welcome  {player_name} !!")
 
@@ -120,8 +120,9 @@ class RunGame:
             self.delprint(" Choose if you want to sit in first class or\n"
                           " in the handcar. It makes no difference \n"
                           " to the game, but it's more fun to choose.")
-            compartment = input(" Do you want to sit in first class\n"
-                                " or the handcar? Choose one to continue: ")
+            compartment = input(f" {Fore.BLUE} Do you want to sit in first \n"
+                                " class or the handcar? Choose one to"
+                                "continue: ")
             if compartment == "first class":
                 self.delprint(" You have chosen first class")
                 break
@@ -129,7 +130,7 @@ class RunGame:
                 self.delprint(" You have chosen the handcar")
                 time.sleep(3)
                 break
-            self.delprint(" Please choose between first class or handcar")
+            print(f" {Back.RED} Please choose between first class or handcar")
 
     def __init__(self, question_list):
         self.question_list = question_list
@@ -238,26 +239,31 @@ class RunGame:
             # Check if all cities have been visited
             if self.cities_visited == len(self.inner_cities):
                 self.clear()
-                print("You have visited all cities!")
-                print("Your final score is: " + str(self.score))
+                print(f"{Back.GREEN}{Style.BRIGHT} You have visited"
+                      "all cities!")
+                print(" Your final score is: " + str(self.score))
                 if self.score == 50:
-                    self.delprint("Congratulations! You got a perfect score!"
+                    self.delprint(" Congratulations! You got a perfect score!"
                                   "  You  should be on the show!")
+                    print(f" {Fore.LIGHTGREEN_EX} You are a Star!")
                 elif self.score >= 30:
-                    self.delprint("Congratulations! You got a good score!")
+                    self.delprint(" Congratulations! You got a good score!")
+                    print(f" {Fore.LIGHTBLUE_EX} Still room for improvement!")
                 elif self.score >= 20:
-                    self.delprint("You got an ok score. Try again!")
+                    self.delprint(" You got an ok score. Try again!")
+                    print(f" {Fore.LIGHTYELLOW_EX} You can do better!")
                 elif self.score <= 10:
-                    self.delprint("Did you payt attention in your geography"
+                    self.delprint(" Did you payt attention in your geography"
                                   " classes? Try again!")
-                print("Do you want to play again?")
-                user_input = input("Enter yes or no: ")
+                    print(f" {Fore.LIGHTRED_EX} I know you can do better!")
+                print(" Do you want to play again?")
+                user_input = input(" Enter yes or no: ")
                 if user_input == "yes":
                     self.restart()
                 elif user_input == "no":
                     break  # End the game
                 else:
-                    raise ValueError("Please enter yes or no")
+                    print(f" {Back.RED} Please enter yes or no")
 
     def restart(self):
         """
