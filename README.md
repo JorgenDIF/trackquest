@@ -222,7 +222,16 @@ and get exciting and learning facts try it out
 
 ### Validation
 
+* Python test. I ran a Pyton validation on [CI Python Linter Validator](https://pep8ci.herokuapp.com/)
+with this result on my python files
+
+![Alt text](assets/images/python_question_validation.png)
+
+![Alt text](assets/images/python_run_validation.png)
+
 <a id ="bugs">
+
+
 
 ### Bugs
 
