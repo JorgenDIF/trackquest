@@ -103,7 +103,9 @@ class RunGame:
                       " One guess per destination;"
                       "a wrong answer gets zero points.\n"
                       " Type 'next' to move down a point level if unsure,\n"
-                      " and save your guess to the next point level\n"
+                      " and save your guess to the next point level.\n"
+                      " If you press next on the last point level,\n"
+                      "you will get zero points.\n"
                       " Choose a username to begin.")
 
         while True:

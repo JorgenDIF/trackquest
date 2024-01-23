@@ -36,7 +36,7 @@ and get exciting and learning facts try it out
   - [Returning User](#returning-user)
   - [Frequent User](#frequent-user)
   - [Design](#design)
-- [Feauters](#feauters)
+- [Features](#features)
   - [The Main Page 1](#maine-page1)
 - [Technologies](#technologies)
   - [Language](#language)
@@ -50,7 +50,7 @@ and get exciting and learning facts try it out
   - [Bugs](#bugs)
 - [Deployment](#deployment)
   - [Deployment To Github](#deployment-to-github)
-  - [Deployment To Heroku](#depoyment-to-heroku)
+  - [Deployment To Heroku](#deployment-to-heroku)
 - [Credit](#credit)
   - [Content](#credit-content)
   - [Images](#def2)
@@ -147,7 +147,7 @@ and get exciting and learning facts try it out
 
 ### Design
 
-<a id="feauters">
+<a id="features">
 
 #  Features
 
@@ -203,9 +203,9 @@ and get exciting and learning facts try it out
 | Current score |  I want to see my score after each answer|Expect to get that now  |I get it I´ve got 10 points  |
 |  The question answer incorrect| I got to the next destination now I answer what I think is incorrect | An incorrect message to show | It shows up |
 | After the final destination |I have gotten to the 5th destination and answered  | A end message to show with my points |It shows up  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+|  Restart the game | The game is finnished |Expecting a choice to play again and to type yes or no | It shows up I press yes, the game restarts |
+| Restart the game no  |I press no  | Quit the game | I got a goodbye message, how sweet hehe |
+
 
 <a id="lighthouse">
 
@@ -214,6 +214,9 @@ and get exciting and learning facts try it out
 <a id=browser-test>
 
 ### Browser Test
+
+* Google Chrome on Mac Book- Runs with no problem
+* Safari on Mac Book - I can´t choose username. This is a well known bug
 
 <a id= "vaildation">
 
@@ -245,7 +248,7 @@ and get exciting and learning facts try it out
 13. Step 2 git commit -m "commit message" to push
 
 
-<a id="depoyment-to-heroku">
+<a id="deployment-to-heroku">
 
 ### Deployment To Heroku
 
