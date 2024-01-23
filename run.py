@@ -107,7 +107,7 @@ class RunGame:
                       " Choose a username to begin.")
 
         while True:
-            player_name = input(f"{Fore.BLUE} Please enter your"
+            player_name = input(f"{Fore.BLACK}{Back.YELLOW} Please enter your"
                                 " preferred username max 10 letters: ")
             if player_name:
                 if len(player_name) <= 10:
@@ -120,8 +120,8 @@ class RunGame:
             self.delprint(" Choose if you want to sit in first class or\n"
                           " in the handcar. It makes no difference \n"
                           " to the game, but it's more fun to choose.")
-            compartment = input(f"{Fore.BLUE} Do you want to sit in first \n"
-                                " class or the handcar? Choose one to"
+            compartment = input(f"{Fore.BLACK}{Back.YELLOW} Do you want to sit"
+                                " in first class or the handcar? Choose one to"
                                 "continue: ")
             if compartment == "first class":
                 self.delprint(" You have chosen first class")
@@ -266,6 +266,7 @@ class RunGame:
                     break  # End the game
                 else:
                     print(f"{Back.RED} Please enter yes or no")
+                    user_input = input(" Enter yes or no: ")
 
     def restart(self):
         """
