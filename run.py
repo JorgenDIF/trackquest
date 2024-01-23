@@ -96,6 +96,15 @@ class RunGame:
         """
         self.clear()
 
+        self.delprint("""
+s   o o o o o o o . . .   ______________________________ _____=======_||____
+   o      _____           ||                            | |                 |
+ .][__n_n_|DD[  ====_____  |                            | |                 |
+>(________|__|_[_________]_|____________________________|_|_________________|
+_/oo OOOOO oo`  ooo   ooo  'o!o!o                  o!o!o` 'o!o         o!o`
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+        """)
+
         self.delprint(" Welcome to Track Quest!\n"
                       " Inspired by the Swedish TV-show 'På spåret,'\n"
                       " guess the city in 5 rounds\n"
