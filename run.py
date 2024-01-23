@@ -70,7 +70,7 @@ class RunGame:
         else:
             os.system("clear")
 
-    def delprint(self, text, delay_time=0.04):
+    def delprint(self, text, delay_time=0.02):
         """
         Function to print text with a delay between each character.
         Credit to: https://replit.com/talk/learn/The-Slow-Print/44741
@@ -89,7 +89,7 @@ class RunGame:
         Parameters:
         - text (str): The text to be displayed with a delayed effect.
         - delay_time (float, optional): The duration of the delay between
-        characters (default is 0.04 seconds).
+        characters (default is 0.02 seconds).
 
         Credit: The implementation is inspired by
         https://replit.com/talk/learn/The-Slow-Print/44741.
@@ -105,7 +105,7 @@ class RunGame:
                       " Type 'next' to move down a point level if unsure,\n"
                       " and save your guess to the next point level.\n"
                       " If you press next on the last point level,\n"
-                      "you will get zero points.\n"
+                      " you will get zero points.\n"
                       " Choose a username to begin.")
 
         while True:
@@ -124,16 +124,17 @@ class RunGame:
                           " in the handcar. It makes no difference \n"
                           " to the game, but it's more fun to choose.")
             compartment = input(f"{Fore.LIGHTBLUE_EX}{Style.NORMAL} "
-                                " Type 'First Class' or 'Handcar' to"
-                                "make your choice:: ")
-            if compartment == "first class":
-                self.delprint(" You have chosen first class")
+                                "Type for 1 for First Class or 2 for Handcar to"
+                                " make your choice: ")
+            if compartment == "1":
+                self.delprint(" You have chosen First class")
                 break
-            if compartment == "handcar":
-                self.delprint(" You have chosen the handcar")
+            if compartment == "2":
+                self.delprint(" You have chosen the Handcar")
                 time.sleep(3)
                 break
-            print(f"{Back.RED} Please choose between first class or handcar")
+            print(f"{Back.RED} Please choose between 1.First class"
+                  "or 2.Handcar.")
 
     def __init__(self, question_list):
         """
