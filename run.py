@@ -133,7 +133,6 @@ class RunGame:
             print(f"{Back.RED} Please choose between first class or handcar")
 
     def __init__(self, question_list):
-        self.question_list = question_list
         """
         Intializes a new instance of the RunGame class.
 
@@ -142,9 +141,10 @@ class RunGame:
         Each question is a dictionary with the following keys
         'category', 'points', 'text', and 'answer'.
         The also creates a list of unique cities from the
-        quesstion categories and randomizes the order of the cities.
+        question categories and randomizes the order of the cities.
 
         """
+        self.question_list = question_list
 
         question_bank = []
         for question in self.question_list:
