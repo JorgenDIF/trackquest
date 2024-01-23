@@ -185,8 +185,27 @@ and get exciting and learning facts try it out
 
 #  Testing
 
+<a id="testing">
 
 ### Manual Testing
+
+| Test Case | Steps | Expected Result | Actual Result |
+| --- | --- | --- | --- |
+| Heroku | Go to the  live Heroku site | App should run  | App is running |
+| Intro|  Wait for the intro|  Intro should start| Intro is starting |
+| The username sign in | The choose username| I should get a prompt to choose username of max 10 letters. It shows up I choose one with 3 letters| I´m welcomed |
+| Don´t choose username or more than 10 letters |  I try to skip it | Error message | I got an error message|
+|  Handcar or first class| The choose handcar or first class| Expecting the prompt to show up and force me to choose | Its showing up I´m choosing and app is moving on |
+| Handcar or first class skip | I try to sign something else | Error message | I got an error message |
+| Game starts | The game should start now | I should go to the first random destination and the 10 point question should show up |  It shows up|
+| The question next button | I get the first question for 10 points and are told to guess or type next | I type next to get 8 points question | I got the 8 point question |
+| The question answer | I try to answer what I think is correct and type in a guess| A correct or incorrect message |I got the message of correct  |
+| Current score |  I want to see my score after each answer|Expect to get that now  |I get it I´ve got 10 points  |
+|  The question answer incorrect| I got to the next destination now I answer what I think is incorrect | An incorrect message to show | It shows up |
+| After the final destination |I have gotten to the 5th destination and answered  | A end message to show with my points |It shows up  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
 
 <a id="lighthouse">
 
@@ -263,6 +282,8 @@ The following steps were then taken:
  <a id="credit-content">
 
  ### Content
+
+
 
   ### Media
 
