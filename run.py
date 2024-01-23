@@ -257,7 +257,7 @@ class RunGame:
                     self.delprint(" You got an ok score. Try again!")
                     print(f" {Fore.LIGHTYELLOW_EX} You can do better!")
                 elif self.score <= 10:
-                    self.delprint(" Did you payt attention in your geography"
+                    self.delprint(" Did you pay attention in your geography"
                                   " classes? Try again!")
                     print(f" {Fore.LIGHTRED_EX} I know you can do better!")
                 print(" Do you want to play again?")
@@ -266,7 +266,7 @@ class RunGame:
                     self.restart()
                 elif user_input == "no":
                     print(f"{Fore.BLUE} Thanks for playing! Welcome"
-                          "back anytime!")
+                          " back anytime!")
                     break  # End the game
                 else:
                     print(f"{Back.RED} Please enter yes or no")
