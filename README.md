@@ -267,3 +267,8 @@ The following steps were then taken:
   ### Media
 
   ### Thank You
+
+  * To my wife and family for the support
+  * My Mentor for all the invaluable support and feedback
+  * Kay at Code Institute for invaluable support and motivation
+  * Slack Community
