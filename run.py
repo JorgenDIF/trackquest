@@ -9,18 +9,18 @@ The game is built with inspiration from the youtube tutorial
 
 
 # Importing modules
-import os
-import sys
-import time
-import random
+import os  # for clearing the screen
+import sys  # for printing text with a delay
+import time  # for printing text with a delay
+import random  # for randomizing the order of the cities
 from question_data import questions
 
 
 class Question:
     """
     Args:
-    category (str): The category or"
-    "destination associated with the question.
+    category (str): The category or
+    destination associated with the question.
     points (int): The point value assigned to the question.
     text (str): The text of the trivia question.
     answer (str): The correct answer to the trivia question.
@@ -130,6 +130,17 @@ class RunGame:
 
     def __init__(self, question_list):
         self.question_list = question_list
+        """
+        Intializes a new instance of the RunGame class.
+
+        This method takes a list of questions as input
+        and creates Question objects from the input list.
+        Each question is a dictionary with the following keys
+        'category', 'points', 'text', and 'answer'.
+        The also creates a list of unique cities from the
+        quesstion categories and randomizes the order of the cities.
+
+        """
 
         question_bank = []
         for question in self.question_list:
@@ -246,7 +257,12 @@ class RunGame:
                     raise ValueError("Please enter yes or no")
 
     def restart(self):
-        """Method to restart the game."""
+        """
+        Resets the game to its initial state and starts a new game.
+
+        This method resets the score and cities_visited attributes.
+        It then calls the run method to start a new game.
+        """
         self.score = 0
         self.cities_visited = 0
         self.run()
