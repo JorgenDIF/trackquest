@@ -107,13 +107,13 @@ class RunGame:
                       " Choose a username to begin.")
 
         while True:
-            player_name = input(f"{Fore.BLACK}{Back.YELLOW}{Style.NORMAL} "
-                                " Please enter your preferred username"
-                                "max 10 letters: ")
+            player_name = input(f"{Fore.LIGHTBLUE_EX}{Style.NORMAL} "
+                                "Please enter your preferred username"
+                                " max 10 letters: ")
             if player_name:
                 if len(player_name) <= 10:
                     break
-            print(f" {Back.RED} Please choose a username of max 10 letters.")
+            print(f" {Back.RED}Please choose a username of max 10 letters.")
         # Print a blank line for formatting
         self.delprint(f" Welcome  {player_name} !!")
 
@@ -121,9 +121,9 @@ class RunGame:
             self.delprint(" Choose if you want to sit in first class or\n"
                           " in the handcar. It makes no difference \n"
                           " to the game, but it's more fun to choose.")
-            compartment = input(f"{Fore.BLACK}{Back.WHITE}{Style.NORMAL} "
+            compartment = input(f"{Fore.LIGHTBLUE_EX}{Style.NORMAL} "
                                 "Do you wabt to sit in first class or "
-                                "the handcar? Choose one tocontinue: ")
+                                "the handcar? Choose one to continue: ")
             if compartment == "first class":
                 self.delprint(" You have chosen first class")
                 break
@@ -208,7 +208,7 @@ class RunGame:
                 self.clear()
                 self.delprint(" Where are we heading?")
                 print(inner_question.text)
-                user_answer = input(f"{Fore.BLACK}{Back.YELLOW}{Style.NORMAL}"
+                user_answer = input(f"{Fore.LIGHTBLUE_EX}{Style.NORMAL}"
                                     "Your answer or type next: ")
 
                 # Check if the user's answer is correct
