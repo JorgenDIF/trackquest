@@ -238,6 +238,13 @@ with this result on my python files
 
 ### Bugs
 
+| Bug | Status | Description| Steps to resolve |
+| --- | --- | --- | --- |
+| Crashed when answered wrong |  ~~Resolved~~  |  When I answered a question wrong the app crashed|I had to convert "The correct answer was: " + str(question.answer) to a string |
+|  Next wasnt working |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+
 <a id="deployment">
 
 # Depolyment
