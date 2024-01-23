@@ -120,11 +120,11 @@ class RunGame:
         self.delprint(f" Welcome  {player_name} !!")
 
         while True:
-            self.delprint(" Choose if you want to sit in first class or\n"
-                          " in the handcar. It makes no difference \n"
+            self.delprint(" Choose if you want to sit in First Class or\n"
+                          " in the Handcar. It makes no difference \n"
                           " to the game, but it's more fun to choose.")
             compartment = input(f"{Fore.LIGHTBLUE_EX}{Style.NORMAL} "
-                                "Type for 1 for First Class or 2 for Handcar "
+                                "Type for 1 for First Class or 2 for Handcar"
                                 " to make your choice: ")
             if compartment == "1":
                 self.delprint(" You have chosen First class")
