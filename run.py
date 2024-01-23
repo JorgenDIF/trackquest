@@ -107,14 +107,14 @@ class RunGame:
                       " Choose a username to begin.")
 
         while True:
-            player_name = input(Fore.BLUE + " Please enter your preferred"
-                                " username max 10 letters: ")
+            player_name = input(f"{Fore.BLUE} Please enter your"
+                                " preferred username max 10 letters: \n ")
             if player_name:
                 if len(player_name) <= 10:
                     break
             print(" Please choose a username of max 10 letters.")
         # Print a blank line for formatting
-        self.delprint(" Welcome " + player_name + "!")
+        self.delprint(f" Welcome  {player_name} !!")
 
         while True:
             self.delprint(" Choose if you want to sit in first class or\n"
@@ -212,7 +212,7 @@ class RunGame:
                 if user_answer.lower() == inner_question.answer.lower():
                     self.delprint(" Your answer is.....")
                     time.sleep(2)
-                    print("Correct!")
+                    print(f"{Style.BRIGHT}{Back.GREEN} Correct!")
                     self.delprint(" You get " + str
                                   (inner_question.points) + " points!")
                     self.score += inner_question.points
@@ -224,7 +224,7 @@ class RunGame:
                 else:
                     self.delprint(" Your answer is.....")
                     time.sleep(2)
-                    print(" Incorrect!")
+                    print(f"{Style.BRIGHT}{Back.RED} Incorrect!")
                     self.delprint(" The correct answer was: " + str
                                   (inner_question.answer))
                     self.delprint(" You get 0 points!")
