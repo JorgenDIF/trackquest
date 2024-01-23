@@ -104,8 +104,8 @@ class RunGame:
                       "a wrong answer gets zero points.\n"
                       " Type 'next' to move down a point level if unsure,\n"
                       " and save your guess to the next point level.\n"
-                      " If you press next on the last point level,\n"
-                      " you will get zero points.\n"
+                      " Just a reminder, if you press next on the last \n"
+                      " point level, you will get zero points!!\n"
                       " Choose a username to begin.")
 
         while True:
