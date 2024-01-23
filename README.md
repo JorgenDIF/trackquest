@@ -39,7 +39,7 @@ and get exciting and learning facts try it out
 - [Features](#features)
   - [The Main Page 1](#maine-page1)
 - [Technologies](#technologies)
-  - [Language](#language)
+  - [Languages](#languages)
   - [Tools](#tools)
   - [Frameworks & Libaries](#frameworks-libaries)
 - [Testing](#testing)
@@ -311,6 +311,7 @@ The following steps were then taken:
  * [CI_PP3_LJAAFRICAQUIZ](https://github.com/LanreAndero/CI_PP3_LJAAFRICAQUIZ/blob/main/run.py)
  * [Inc21 Python 3 Quiz](https://github.com/Inc21/Python-Quiz-Game-PP3/blob/main/run.py)
  * What I got the structure to get started was from [QuizBrain](https://github.com/sampathbasa/quiz-app/blob/main/quiz_brain.py) . I learnt alot about classes and Dick Vlaanderen my mentor gave me a few tips
+ * Drawing on my experience from previous projects (PP1 and PP2), I found inspiration in my own work to develop the current project. The learnings and insights gained from those earlier endeavors significantly influenced the design and implementation of this project."
 
 
 
