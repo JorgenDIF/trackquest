@@ -67,23 +67,48 @@ and get exciting and learning facts try it out
 
 <a id="the-strategy">
 
+
+
 ### The Strategy
 
+- Embark on a thrilling adventure with our trivia game inspired by the Swedish TV show "På Spåret."
+- The aim is to create an engaging and educational experience, taking users on a journey around the world through captivating questions about different cities.
 <a id="the-scope">
 
 ### The Scope
+
+- This project focuses on delivering an engaging trivia game with a learning twist.
+- Users navigate through five rounds, each featuring a different city.
+- A unique challenge is introduced by limiting participants to a single guess per round.
+- Questions in each round decrease in difficulty, awarding points from 10 to 2. A scoring system provides feedback, adding a competitive edge.
+- Inspired by "På Spåret," this design encourages strategic thinking and ensures an enjoyable and educational gaming experience.
+
 
 <a id="the-structure">
 
 ### The Structure
 
+- The game's structure is intentionally simple and intuitive.
+- It comprises multiple rounds, each spotlighting a specific city.
+- Users get one opportunity to guess the city in each round, with awarded points decreasing gradually.
+- This streamlined structure ensures an engaging and straightforward gaming experience.
+
 <a id="the-skeleton">
 
 ### The Skeleton
 
+- To meticulously plan out the game's components and functions, Lucidchart was employed.
+- These visual diagrams served as a roadmap during development, ensuring a user-friendly and visually appealing game interface.
+
 <a id="the-surface">
 
 ### The Surface
+
+- The game interface is clean, modern, and user-friendly.
+- Typography is chosen for readability and visual appeal.
+- The game adds variety by randomizing the city for each round.
+- Inclusion of various cities and questions provides an immersive and enjoyable experience for players.
+
 
 <a id="ux">
 
@@ -93,13 +118,28 @@ and get exciting and learning facts try it out
 
 ### First Time User
 
+- Quick Start : As a first-time user, the game provides clear instructions on how to play, ensuring an immediate and intuitive understanding.
+- Warm Welcome :Users are welcomed with excitement, creating a positive and inviting atmosphere from the start.
+- Inclusive Atmosphere : Whether familiar with "På Spåret" or not, the game ensures all users feel welcome and can easily engage with the experience.
+
 <a id="returning-user">
 
 ### Returning User
 
+- As a returning user, I want to experience different destinations each time I play the game.
+- The game offers a fresh and varied experience by randomizing cities, ensuring no two rounds are the same.
+
 <a id="frequent-user">
 
 ### Frequent User
+
+ - I would love to see new parts of the game resembling the real show, where every destination has questions after arrival.
+ - The introduction of this new element adds depth and immersion to the gameplay, providing a unique experience for frequent users.
+ - Adding more cities to the game would enhance the variety and keep the experience engaging for returning users.
+ - A growing list of cities ensures that each playthrough brings new challenges and exploration opportunities.
+
+
+
 
 
 <a id="design">
@@ -126,9 +166,15 @@ and get exciting and learning facts try it out
 
 ### Languages
 
+* Python
+
 <a id="tools">
 
 ### Tools
+
+* Lucidcharts : was used to create detailed diagrams outlining the game's structure, parts, and functions
+* VSCode: Utilized for writing and editing the Python code
+* 
 
 <a id="frameworks-libaries">
 
