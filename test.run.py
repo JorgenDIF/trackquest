@@ -4,4 +4,4 @@ import colorama  # for printing text in color
 
 colorama.init(autoreset=True)
 
-print(f"{Fore.LIGHTBLUE_EX}{Back.YELLOW}This is red text")
+print(f"{Fore.BLACK}{Back.WHITE}{Style.NORMAL} This is red text")
