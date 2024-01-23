@@ -44,7 +44,6 @@ and get exciting and learning facts try it out
   - [Frameworks & Libaries](#frameworks-libaries)
 - [Testing](#testing)
   - [Manual Testing](#manual-testing)
-  - [Lighthouse](#lighthouse)
   - [Browser Test](#browser-test)
   - [Validation](#validation)
   - [Bugs](#bugs)
@@ -210,9 +209,6 @@ and get exciting and learning facts try it out
 | Restart the game no  |I press no  | Quit the game | I got a goodbye message, how sweet hehe |
 
 
-<a id="lighthouse">
-
-### Lighthouse
 
 <a id=browser-test>
 
@@ -241,9 +237,9 @@ with this result on my python files
 | Bug | Status | Description| Steps to resolve |
 | --- | --- | --- | --- |
 | Crashed when answered wrong |  ~~Resolved~~  |  When I answered a question wrong the app crashed|I had to convert "The correct answer was: " + str(question.answer) to a string |
-|  Next wasnt working |  ~~Resolved~~  | I couldnt move on while typing next|  I had to put before the incorrect answer in the loop |
+|  Next wasnt working |  ~~Resolved~~  | I couldnt move on while typing next|  I had to put next before the incorrect answer in the loop |
 |The app isnt working in Safari  | Ungoing | When I open the app in safari I cant log in | Its a known issue so I can´t fix it |
-
+| The app crashed when starting the game | ~~Resolved~~ |When I run the file it worked fine until the intro was over  | I had misspelled points with point in the first questions key for points  |
 
 
 <a id="deployment">
