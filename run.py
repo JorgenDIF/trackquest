@@ -124,8 +124,8 @@ class RunGame:
                           " in the Handcar. It makes no difference \n"
                           " to the game, but it's more fun to choose.")
             compartment = input(f"{Fore.LIGHTBLUE_EX}{Style.NORMAL} "
-                                "Type for 1 for First Class or 2 for Handcar"
-                                " to make your choice: ")
+                                "Type for '1' for First Class or '2' for "
+                                " Handcar to make your choice: ")
             if compartment == "1":
                 self.delprint(" You have chosen First class")
                 break
@@ -133,8 +133,8 @@ class RunGame:
                 self.delprint(" You have chosen the Handcar")
                 time.sleep(3)
                 break
-            print(f"{Back.RED} Please choose between 1.First class"
-                  "or 2.Handcar.")
+            print(f"{Back.RED} Please type  '1' First class"
+                  "or '2' for Handcar.")
 
     def __init__(self, question_list):
         """
