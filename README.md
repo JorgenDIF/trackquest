@@ -97,8 +97,11 @@ and get exciting and learning facts try it out
 
 ### The Skeleton
 
-- To meticulously plan out the game's components and functions, Lucidchart was employed.
+- To meticulously plan out the game's components and functions, Lucidchart was employed. This is how it looks:
+![Alt text](assets/images/lucidchart_diagram.png)
+
 - These visual diagrams served as a roadmap during development, ensuring a user-friendly and visually appealing game interface.
+
 
 <a id="the-surface">
 
@@ -225,9 +228,9 @@ and get exciting and learning facts try it out
 * Python test. I ran a Pyton validation on [CI Python Linter Validator](https://pep8ci.herokuapp.com/)
 with this result on my python files
 
-![Alt text](assets/images/python_question_validation.png)
+![run.py test](assets/images/python_run_validation.png)
+![question_data test](assets/images/python_question_validation.png)
 
-![Alt text](assets/images/python_run_validation.png)
 
 <a id ="bugs">
 

@@ -211,7 +211,7 @@ class RunGame:
                 self.delprint(" Where are we heading?")
                 print(inner_question.text)
                 user_answer = input(f"{Fore.LIGHTBLUE_EX}{Style.NORMAL}"
-                                    "Your answer or type next: ")
+                                    " Your answer or type next: ")
 
                 # Check if the user's answer is correct
                 if user_answer.lower() == inner_question.answer.lower():
