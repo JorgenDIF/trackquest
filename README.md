@@ -241,9 +241,10 @@ with this result on my python files
 | Bug | Status | Description| Steps to resolve |
 | --- | --- | --- | --- |
 | Crashed when answered wrong |  ~~Resolved~~  |  When I answered a question wrong the app crashed|I had to convert "The correct answer was: " + str(question.answer) to a string |
-|  Next wasnt working |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+|  Next wasnt working |  ~~Resolved~~  | I couldnt move on while typing next|  I had to put before the incorrect answer in the loop |
+|The app isnt working in Safari  | Ungoing | When I open the app in safari I cant log in | Its a known issue so I can´t fix it |
+
+
 
 <a id="deployment">
 
@@ -304,6 +305,14 @@ The following steps were then taken:
  <a id="credit-content">
 
  ### Content
+
+ * This quiz is inspired by a few other quiz games which I have studied in detail.
+ * [Plant-Quiz](https://github.com/KrystalCoding/plant-quiz/blob/main/run.py)
+ * [CI_PP3_LJAAFRICAQUIZ](https://github.com/LanreAndero/CI_PP3_LJAAFRICAQUIZ/blob/main/run.py)
+ * [Inc21 Python 3 Quiz](https://github.com/Inc21/Python-Quiz-Game-PP3/blob/main/run.py)
+ * What I got the structure to get started was from [QuizBrain](https://github.com/sampathbasa/quiz-app/blob/main/quiz_brain.py) . I learnt alot about classes and Dick Vlaanderen my mentor gave me a few tips
+
+
 
 
 

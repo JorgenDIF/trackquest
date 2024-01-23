@@ -124,8 +124,8 @@ class RunGame:
                           " in the handcar. It makes no difference \n"
                           " to the game, but it's more fun to choose.")
             compartment = input(f"{Fore.LIGHTBLUE_EX}{Style.NORMAL} "
-                                "Do you wabt to sit in first class or "
-                                "the handcar? Choose one to continue: ")
+                                " Type 'First Class' or 'Handcar' to"
+                                "make your choice:: ")
             if compartment == "first class":
                 self.delprint(" You have chosen first class")
                 break
