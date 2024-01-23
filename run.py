@@ -41,7 +41,6 @@ class RunGame:
     A class to represent the game.
 
     Represent the trivia game inspired by 'På spåret.'
-
     This class orchestrates the trivia game, taking
     a list of questions as input
     and creating Question objects from the input list.
@@ -108,8 +107,8 @@ class RunGame:
                       " Choose a username to begin.")
 
         while True:
-            player_name = input(" Please enter your preferred username "
-                                "max 10 letters: ")
+            player_name = input(Fore.BLUE + " Please enter your preferred"
+                                " username max 10 letters: ")
             if player_name:
                 if len(player_name) <= 10:
                     break
