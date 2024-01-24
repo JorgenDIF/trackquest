@@ -125,6 +125,7 @@ The game is live on :[Heroku](https://trackquest-ca7595380298.herokuapp.com/)
 - Quick Start : As a first-time user, the game provides clear instructions on how to play, ensuring an immediate and intuitive understanding.
 - Warm Welcome :Users are welcomed with excitement, creating a positive and inviting atmosphere from the start.
 - Inclusive Atmosphere : Whether familiar with "På Spåret" or not, the game ensures all users feel welcome and can easily engage with the experience.
+- Any error messages should guide users in a direction that is easily understandable for resolving issues.
 
 <a id="returning-user">
 
@@ -141,6 +142,7 @@ The game is live on :[Heroku](https://trackquest-ca7595380298.herokuapp.com/)
  - The introduction of this new element adds depth and immersion to the gameplay, providing a unique experience for frequent users.
  - Adding more cities to the game would enhance the variety and keep the experience engaging for returning users.
  - A growing list of cities ensures that each playthrough brings new challenges and exploration opportunities.
+ - Also some music question would take this one step further in to the world of "På Spåret"
 
 
 
@@ -151,7 +153,21 @@ The game is live on :[Heroku](https://trackquest-ca7595380298.herokuapp.com/)
 
 ### Design
 
+- In a Terminal-based game, design options are limited.
+- I've utilized Colorama to add colors for better distinction among various inputs.:
+     * Blue for elements like username, handcar or first class, and answer inputs.
+     * Red for error messages and incorrect answers.
+     * Green for correct answers.
+     * I've also implemented a color scheme for the final messages, indicating the user's performance.
+     * For instance, positive outcomes may be highlighted in green,
+       while negative outcomes or errors could be displayed in red."
+
+- I've also incorporated ASCII art to enhance the visual appeal
+  and make the overall experience more enjoyable for users.
+
 <a id="features">
+
+
 
 #  Features
 
@@ -218,6 +234,7 @@ The game is live on :[Heroku](https://trackquest-ca7595380298.herokuapp.com/)
 
 * Google Chrome on Mac Book- Runs with no problem
 * Safari on Mac Book - I can´t choose username. This is a well known bug
+* Microsoft Edge - Runs with no problem
 
 <a id= "vaildation">
 
@@ -296,6 +313,7 @@ The following steps were then taken:
 
 
 
+
 <a id=credit>
 
 # Credit
@@ -316,6 +334,8 @@ The following steps were then taken:
 
 
   ### Media
+
+  * The Ascii Art is from ![Ascii Art Archive](https://www.asciiart.eu/)
 
   ### Thank You
 
