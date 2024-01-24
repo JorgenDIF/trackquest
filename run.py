@@ -267,14 +267,14 @@ _/oo OOOOO oo`  ooo   ooo  'o!o!o                  o!o!o` 'o!o         o!o`
                     print(f"{Fore.LIGHTGREEN_EX} You are a Star!")
                 elif self.score >= 30:
                     self.delprint(" Congratulations! You got a good score!")
-                    print(f" {Fore.LIGHTBLUE_EX} Still room for improvement!")
+                    print(f" {Fore.LIGHTBLUE_EX}Still room for improvement!")
                 elif self.score >= 20:
                     self.delprint(" You got an ok score. Try again!")
-                    print(f" {Fore.LIGHTYELLOW_EX} You can do better!")
+                    print(f" {Fore.LIGHTYELLOW_EX}You can do better!")
                 elif self.score <= 10:
                     self.delprint(" Did you pay attention in your geography"
                                   " classes? Try again!")
-                    print(f" {Fore.LIGHTRED_EX} I know you can do better!")
+                    print(f" {Fore.LIGHTRED_EX}I know you can do better!")
                 print(" Do you want to play again?")
                 user_input = input(" Enter yes or no: ")
                 if user_input == "yes":
