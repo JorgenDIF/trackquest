@@ -280,6 +280,7 @@ _/oo OOOOO oo`  ooo   ooo  'o!o!o                  o!o!o` 'o!o         o!o`
                 if user_input == "yes":
                     self.restart()
                 elif user_input == "no":
+
                     print(f"{Fore.BLUE} Thanks for playing! Welcome"
                           " back anytime!")
                     break  # End the game
