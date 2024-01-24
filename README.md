@@ -39,7 +39,9 @@ The game is live on :[Heroku](https://trackquest-ca7595380298.herokuapp.com/)
   - [Frequent User](#frequent-user)
   - [Design](#design)
 - [Features](#features)
-  - [The Main Page 1](#maine-page1)
+  - [Intro](#intro)
+  - [Questions](#question)
+  - [End](#end)
 - [Technologies](#technologies)
   - [Languages](#languages)
   - [Tools](#tools)
@@ -61,6 +63,11 @@ The game is live on :[Heroku](https://trackquest-ca7595380298.herokuapp.com/)
 <a id="responsive">
 
 ### Am I Responsive?
+
+* This is how it looks in "Am I responsive
+
+![Responsive](<assets/images/responsive (1).png>)
+
 
 <a id="ux">
 
@@ -163,7 +170,8 @@ The game is live on :[Heroku](https://trackquest-ca7595380298.herokuapp.com/)
        while negative outcomes or errors could be displayed in red."
 
 - I've also incorporated ASCII art to enhance the visual appeal
-  and make the overall experience more enjoyable for users.
+  and make the overall experience more enjoyable for users. While I would have liked to include more content,
+  time constraints limited additional features.
 
 <a id="features">
 
@@ -171,9 +179,73 @@ The game is live on :[Heroku](https://trackquest-ca7595380298.herokuapp.com/)
 
 #  Features
 
-  <a id="maine-page1">
+  <a id="intro">
 
-### The Main Page 1
+### Intro
+![Intro](assets/images/intro.png)
+
+* In the introduction, we welcome the player, explain the rules,
+  and provide an option to choose a username of max 10 letters for a personalized experience.
+
+* If the user enters more than 10 letters or tries to skip, an error message will appear.
+
+![Error User](assets/images/error_user_real.png)
+
+
+
+*Afterward, in the game, you'll find a clear option to choose between 1 for first class or 2 for hand car
+explicitly stated as just for fun and without any impact on the gameplay.
+
+![hand](assets/images/handorfirst.png)
+
+* If the user enters something else or tries to skip, an error message will appear.
+
+![Error](assets/images/erromessage_username.png)
+
+<a id="question">
+
+### Question
+
+* At the first destination, users encounter the initial question.
+They have the option to respond for 10 points or press 'next' for 8 points.
+A correct answer earns points corresponding to the level, while an incorrect one results in 0 points.
+This pattern continues until reaching the 2-point level. Pressing 'next' at this stage awards 0 points.
+
+![Question](assets/images/question.png)
+
+* If the user answers correct they will be shown this :
+
+![Correct](assets/images/correct_answer.png)
+
+* If the user answers incorrect they will be shown this :
+
+![Incorrect](assets/images/incorrect_answer.png)
+
+* They can type next then this will happen :
+
+![Next](assets/images/next.png)
+
+![Next level ](assets/images/next_level.png)
+
+
+<a id="end">
+
+### End
+
+* After visiting all cities and answering the questions, users will encounter the end page , visually presented. Following the game's completion, users receive feedback on their performance, final points, and are given the option to play again, all accompanied by visual elements.
+
+![End ](assets/images/end_play_again.png)
+
+* If they choose to play again the game restarts. If they answer no, a short messages appears
+!
+[No](<assets/images/end_no_real (1).png>)
+
+* If they type anything else an error appears
+
+![Error](assets/images/play_again_error.png)
+
+
+
 
 
 <a id="technologies">
