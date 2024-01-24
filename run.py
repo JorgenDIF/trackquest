@@ -240,8 +240,10 @@ _/oo OOOOO oo`  ooo   ooo  'o!o!o                  o!o!o` 'o!o         o!o`
                     print(f"{Style.BRIGHT}{Back.GREEN} Correct!")
                     self.delprint(" You get " + str
                                   (inner_question.points) + " points!")
+                    time.sleep(2)
                     self.score += inner_question.points
                     self.delprint(" Your current score is: " + str(self.score))
+                    time.sleep(2)
                     self.delprint(" Prepare for the next destination!")
                     break
                 elif user_answer.lower() == "next":
@@ -253,7 +255,9 @@ _/oo OOOOO oo`  ooo   ooo  'o!o!o                  o!o!o` 'o!o         o!o`
                     self.delprint(" The correct answer was: " + str
                                   (inner_question.answer))
                     self.delprint(" You get 0 points!")
+                    time.sleep(2)
                     self.delprint(" Your current score is: " + str(self.score))
+                    time.sleep(2)
                     self.delprint(" Prepare for the next destination!")
                     break  # Move to the next city if the answer is incorrect
 
